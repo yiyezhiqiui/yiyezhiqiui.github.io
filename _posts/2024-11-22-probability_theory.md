@@ -52,7 +52,6 @@ $$
 
 $$
 f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty<x<\infty\\
-P(A)=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+……+P(A|B_n)P(B_n)\\
 P(B_i|A)=P(A|B_i)P(B_i)/ \sum_{j=1}^n P(A|B_j)P(B_j)
 $$
 
@@ -96,12 +95,10 @@ $P\{x_1\leq X\leq x_2\}=P\{X\leq x_2\}-P\{X\leq x_1\}=F(x_2)-F(x_1)$
 
 下面介绍三种重要的连续型随机变量
 ### 1.均匀分布
-$$
-f(x)=\begin{cases}
+$f(x)=\begin{cases}
 \frac{1}{b-a},   a<x<b\\
 0,其他
-\end{cases}
-$$
+\end{cases}$
 ### 2.指数分布
 $$
 f(x)=\begin{cases}
