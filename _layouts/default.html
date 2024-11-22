@@ -3,17 +3,17 @@
 
 <head>
   <!-- 引入 MathJax -->
-  <script type="text/javascript">
-    MathJax = {
-      tex: {
-        inlineMath: [['\\(','\\)']],
-        displayMath: [['$$','$$'], ['\\[','\\]']],
-      },
-      loader: {load: ['[tex]/ams']},
-    };
-  </script>
   <script type="text/javascript" async
-    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+  src="https://cdn.jsdelivr.net/npm/mathjax@2/es5/tex-mml-chtml.js">
+    </script>
+  <script type="text/javascript">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [ ['$','$'], ['\\(','\\)'] ],  // 行内公式的配置
+        displayMath: [ ['$$','$$'], ['\[','\]'] ],  // 块级公式的配置
+        processEscapes: true
+      }
+    });
   </script>
 
   {% include head.html %}
