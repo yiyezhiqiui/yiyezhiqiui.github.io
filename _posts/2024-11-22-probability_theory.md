@@ -86,19 +86,21 @@ $P\{x_1\leq X\leq x_2\}=P\{X\leq x_2\}-P\{X\leq x_1\}=F(x_2)-F(x_1)$
 ### 1.均匀分布
 
 $$
-\begin{cases}
+f(x)=\begin{cases}
 \Delta\phi=\pm 2k\pi\\
 \delta=\pm k\lambda
 \end{cases}
 $$
 
 ### 2.指数分布
+
 $$
-f(x)=\begin{cases}
-\frac{1}{\theta}e^{-\frac{x}{\theta}},   x>0\\
-0,其他
+\begin{cases}
+\Delta\phi=\pm 2k\pi\\
+\delta=\pm k\lambda
 \end{cases}
 $$
+
 ### 3.正态分布
 
 $$
