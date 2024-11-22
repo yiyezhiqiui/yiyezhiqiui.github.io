@@ -95,7 +95,7 @@ $$
 ### 2.指数分布
 
 $$
-\begin{cases}
+f(x)=\begin{cases}
 \Delta\phi=\pm 2k\pi\\
 \delta=\pm k\lambda
 \end{cases}
