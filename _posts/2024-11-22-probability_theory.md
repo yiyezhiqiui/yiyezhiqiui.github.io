@@ -86,8 +86,8 @@ $P\{x_1\leq X\leq x_2\}=P\{X\leq x_2\}-P\{X\leq x_1\}=F(x_2)-F(x_1)$
 ### 1.均匀分布
 $$
 \begin{cases}
-\frac{1}{b-a},   a<x<b\\
-0,其他
+\Delta\phi=\pm 2k\pi\\
+\delta=\pm k\lambda
 \end{cases}
 $$
 ### 2.指数分布
