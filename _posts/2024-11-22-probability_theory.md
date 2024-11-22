@@ -84,10 +84,12 @@ $P\{x_1\leq X\leq x_2\}=P\{X\leq x_2\}-P\{X\leq x_1\}=F(x_2)-F(x_1)$
 
 下面介绍三种重要的连续型随机变量
 ### 1.均匀分布
-f(x)=$\begin{cases}
-k\lambda,明纹中心\\
+$$
+f(x)=\begin{cases}
+k\lambda,明纹中心 \\
 (2k-1)\frac{\lambda}{2}，暗纹中心
-\end{cases}$
+\end{cases}
+$$
 ### 2.指数分布
 $$
 f(x)=\begin{cases}
