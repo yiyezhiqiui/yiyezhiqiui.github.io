@@ -87,8 +87,8 @@ $P\{x_1\leq X\leq x_2\}=P\{X\leq x_2\}-P\{X\leq x_1\}=F(x_2)-F(x_1)$
 
 $$
 f(x)=\begin{cases}
-\Delta\phi=\pm 2k\pi\\
-\delta=\pm k\lambda
+\frac{1}{b-a},   a<x<b\\
+0,其他
 \end{cases}
 $$
 
@@ -96,8 +96,8 @@ $$
 
 $$
 f(x)=\begin{cases}
-\Delta\phi=\pm 2k\pi\\
-\delta=\pm k\lambda
+\frac{1}{\theta}e^{-\frac{x}{\theta}},   x>0\\
+0,其他
 \end{cases}
 $$
 
