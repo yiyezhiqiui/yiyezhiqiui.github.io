@@ -97,16 +97,14 @@ $P\{x_1\leq X\leq x_2\}=P\{X\leq x_2\}-P\{X\leq x_1\}=F(x_2)-F(x_1)$
 下面介绍三种重要的连续型随机变量
 ### 1.均匀分布
 $$
-f(x)=
-\begin{cases}
+f(x)=\begin{cases}
 \frac{1}{b-a},   a<x<b\\
 0,其他
 \end{cases}
 $$
 ### 2.指数分布
 $$
-f(x)=
-\begin{cases}
+f(x)=\begin{cases}
 \frac{1}{\theta}e^{-\frac{x}{\theta}},   x>0\\
 0,其他
 \end{cases}
