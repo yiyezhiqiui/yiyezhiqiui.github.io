@@ -7,17 +7,6 @@ comments: true
 author: yiyezhiqiu
 ---
 
-<head>
-    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
-    <script type="text/x-mathjax-config">
-        MathJax.Hub.Config({
-            tex2jax: {
-            skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-            inlineMath: [['$','$']]
-            }
-        });
-    </script>
-</head>
 
 # 概率论的基本概念
 ## 样本空间、随机事件
@@ -51,7 +40,7 @@ $$
 贝叶斯公式:试验E的样本空间为S,A为E的事件,$B_1,B_2……B_n$为S的一个划分,且P(A)>0,P(B_i)>0(i=1,2……,n)则，贝叶斯公式为
 
 $$
-f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty<x<\infty\\
+
 P(B_i|A)=P(A|B_i)P(B_i)/ \sum_{j=1}^n P(A|B_j)P(B_j)
 $$
 
@@ -95,10 +84,11 @@ $P\{x_1\leq X\leq x_2\}=P\{X\leq x_2\}-P\{X\leq x_1\}=F(x_2)-F(x_1)$
 
 下面介绍三种重要的连续型随机变量
 ### 1.均匀分布
-$f(x)=\begin{cases}
+$$f(x)=\begin{cases}
 \frac{1}{b-a},   a<x<b\\
 0,其他
-\end{cases}$
+\end{cases}
+$$
 ### 2.指数分布
 $$
 f(x)=\begin{cases}
@@ -107,8 +97,10 @@ f(x)=\begin{cases}
 \end{cases}
 $$
 ### 3.正态分布
+
 $$
-f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty<x<\infty
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty<x<\infty\\
+P(B_i|A)=P(A|B_i)P(B_i)/ \sum_{j=1}^n P(A|B_j)P(B_j)
 $$
 
 标准正态分布
