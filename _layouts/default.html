@@ -9,7 +9,7 @@
   <script type="text/javascript">
     MathJax.Hub.Config({
       tex2jax: {
-        inlineMath: [ ['$','$'], ['\$','\$'] ],  // 这是行内公式的配置
+        inlineMath: [ ['$','$'], ['\\(','\\)'] ],  // 这是行内公式的配置
         displayMath: [ ['$$','$$'], ['\\[','\\]'] ],  // 这是块级公式的配置
         processEscapes: true
       }
@@ -18,8 +18,6 @@
 
   {% include head.html %}
 </head>
-
-{% include head.html %}
 
 <body>
   {% include nav.html %}
@@ -49,6 +47,7 @@
   <footer class="footer">
     {% include footer.html %}
   </footer>
-
+</div>
 
 </html>
+
