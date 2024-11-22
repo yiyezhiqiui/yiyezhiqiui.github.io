@@ -9,12 +9,14 @@
   <script type="text/javascript">
     MathJax.Hub.Config({
       tex2jax: {
-        inlineMath: [ ['$','$'], ['\$','\$'] ],  // 行内公式的配置
-        displayMath: [ ['$$','$$'], ['\\[','\\]'] ],  // 块级公式的配置
+        inlineMath: [ ['$','$'], ['\\[','\\]'] ],  // 这是行内公式的配置
+        displayMath: [ ['$$','$$'], ['\\[','\\]'] ],  // 这是块级公式的配置
         processEscapes: true
       }
     });
   </script>
+
+  {% include head.html %}
 </head>
 
 <body>
@@ -33,24 +35,19 @@
   </div>
 
   {% include analytics.html %}
-  
-  {% if page.toc==true %}
-  <script>
-    document.getElementById("main").classList.add("withtoc");
-  </script>
-  {% endif %}
-
-  <div class="wrapper-footer-mobile">
-    <footer class="footer">
-      {% include footer.html %}
-    </footer>
-  </div>
-
-  <!-- 在页面底部加载 MathJax -->
-  <script type="text/javascript">
-    MathJax.Hub.Queue(["Typeset", MathJax.Hub]);
-  </script>
-
 </body>
 
+{% if page.toc==true %}
+<script>
+  document.getElementById("main").classList.add("withtoc");
+</script>
+{% endif %}
+
+<div class="wrapper-footer-mobile">
+  <footer class="footer">
+    {% include footer.html %}
+  </footer>
+</div>
+
 </html>
+
