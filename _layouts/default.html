@@ -1,50 +1,52 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <!-- 引入 MathJax -->
-    <script type="text/javascript" async
-      src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+
+<head>
+  <!-- 引入 MathJax -->
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
     </script>
-    <script type="text/javascript">
-      MathJax.Hub.Config({
-        tex2jax: {
-          inlineMath: [ ['$','$'], ['\\(','\\)'] ],  // 行内公式的配置
-          displayMath: [ ['$$','$$'], ['\\[','\\]'] ],  // 块级公式的配置
-          processEscapes: true
-        }
-      });
-    </script>
-  </head>
-  
+  <script type="text/javascript">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],  // 行内公式的配置
+        displayMath: [['$$', '$$'], ['\\[', '\\]']],  // 块级公式的配置
+        processEscapes: true
+      }
+    });
+  </script>
+
   {% include head.html %}
-  <body>
-    {% include nav.html %}
+</head>
 
-    {% if page.toc==true %}
-      <aside class="toc">
-        {% include toc.html html=content %}
-      </aside>
-    {% endif %}
-
-    <div id="main" role="main" class="wrapper-content">
-      <div class="container">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include analytics.html %}
-  </body>
+<body>
+  {% include nav.html %}
 
   {% if page.toc==true %}
-  <script>
-    document.getElementById("main").classList.add("withtoc");
-  </script>
+  <aside class="toc">
+    {% include toc.html html=content %}
+  </aside>
   {% endif %}
 
-  <div class="wrapper-footer-mobile">
-    <footer class="footer">
-      {% include footer.html %}
-    </footer>
+  <div id="main" role="main" class="wrapper-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include analytics.html %}
+</body>
+
+{% if page.toc==true %}
+<script>
+  document.getElementById("main").classList.add("withtoc");
+</script>
+{% endif %}
+
+<div class="wrapper-footer-mobile">
+  <footer class="footer">
+    {% include footer.html %}
+  </footer>
 
 
 </html>
