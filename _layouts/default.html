@@ -1,34 +1,44 @@
 <!DOCTYPE html>
 <html>
+
+<head>
+  <!-- 引入 MathJax -->
+  <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+
   {% include head.html %}
-  <body>
-    {% include nav.html %}
+</head>
+{% include head.html %}
 
-    {% if page.toc==true %}
-      <aside class="toc">
-        {% include toc.html html=content %}
-      </aside>
-    {% endif %}
-
-    <div id="main" role="main" class="wrapper-content">
-      <div class="container">
-        {{ content }}
-      </div>
-    </div>
-
-    {% include analytics.html %}
-  </body>
+<body>
+  {% include nav.html %}
 
   {% if page.toc==true %}
-  <script>
-    document.getElementById("main").classList.add("withtoc");
-  </script>
+  <aside class="toc">
+    {% include toc.html html=content %}
+  </aside>
   {% endif %}
 
-  <div class="wrapper-footer-mobile">
-    <footer class="footer">
-      {% include footer.html %}
-    </footer>
+  <div id="main" role="main" class="wrapper-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </div>
+
+  {% include analytics.html %}
+</body>
+
+{% if page.toc==true %}
+<script>
+  document.getElementById("main").classList.add("withtoc");
+</script>
+{% endif %}
+
+<div class="wrapper-footer-mobile">
+  <footer class="footer">
+    {% include footer.html %}
+  </footer>
 
 
 </html>
