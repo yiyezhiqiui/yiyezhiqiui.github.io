@@ -24,6 +24,20 @@
     })(document);
   </script>  
 
+    <!-- 引入 MathJax -->
+    <script type="text/javascript" async
+    src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/MathJax.js?config=TeX-MML-AM_CHTML">
+    </script>
+  <script type="text/javascript">
+    MathJax.Hub.Config({
+      tex2jax: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']],  // 行内公式的配置
+        displayMath: [['$$', '$$'], ['\[', '\]']],  // 块级公式的配置
+        processEscapes: true
+      }
+    });
+  </script>
+
 
   <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
 
