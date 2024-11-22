@@ -34,6 +34,7 @@ $$
 f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty<x<\infty\\
 P(A)=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+……+P(A|B_n)P(B_n)
 $$
+为全概率公式
 
 
 贝叶斯公式:试验E的样本空间为S,A为E的事件,$B_1,B_2……B_n$为S的一个划分,且P(A)>0,P(B_i)>0(i=1,2……,n)则
@@ -43,6 +44,7 @@ f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty<x<\inft
 P(A)=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+……+P(A|B_n)P(B_n)\\
 P(B_i|A)=P(A|B_i)P(B_i)/ \sum_{j=1}^n P(A|B_j)P(B_j)
 $$
+为贝叶斯公式
 
 ## 独立性
 若$P(AB)=P(A)P(B)$则称事件A与B为独立事件
