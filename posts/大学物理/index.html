@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/assets/favicon.png">
+  
+  
+  <title>大物知识总结 | Kratos : Rebirth</title>
+  <link rel="canonical" href="http://yiyezhiqiui.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/">
+  <meta name="author" content="yiyzhiqiu" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="欢迎" />
+  
+  <meta name="description" content="振动简谐运动的描述简谐振动的数学表达式为$$x&#x3D;A\cos(\omega t+\phi)\A&#x3D;\sqrt{x_0^2+(\frac{v_0}{\omega})^2} \\phi&#x3D;\arccos(\frac{v_0}{A})$$ 对于弹簧振子$\omega&#x3D;\sqrt{\frac{k}{m}}$ T&#x3D;$2\pi\sqrt{\frac{m}{k}}$">
+<meta property="og:type" content="article">
+<meta property="og:title" content="大物知识总结">
+<meta property="og:url" content="http://yiyezhiqiui.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/index.html">
+<meta property="og:site_name" content="Kratos : Rebirth">
+<meta property="og:description" content="振动简谐运动的描述简谐振动的数学表达式为$$x&#x3D;A\cos(\omega t+\phi)\A&#x3D;\sqrt{x_0^2+(\frac{v_0}{\omega})^2} \\phi&#x3D;\arccos(\frac{v_0}{A})$$ 对于弹簧振子$\omega&#x3D;\sqrt{\frac{k}{m}}$ T&#x3D;$2\pi\sqrt{\frac{m}{k}}$">
+<meta property="og:locale">
+<meta property="article:published_time" content="2024-11-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-29T05:45:32.890Z">
+<meta property="article:author" content="All contributors">
+<meta property="article:tag" content="欢迎">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Kratos : Rebirth" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('https://dev.krt.moe/demo-assets/banner.webp');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('https://dev.krt.moe/demo-assets/banner_dark.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('https://dev.krt.moe/demo-assets/bg.webp');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('https://dev.krt.moe/demo-assets/bg.webp');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    <li>
+                                        
+                                            <a href="/">
+                                        
+                                            
+                                                <i class="fa fa-home"></i>
+                                            
+                                            首页
+                                        </a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a href="/archives/">
+                                        
+                                            
+                                                <i class="fa fa-file"></i>
+                                            
+                                            档案馆
+                                        </a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a>
+                                        
+                                            
+                                                <i class="fa fa-link"></i>
+                                            
+                                            链接
+                                        </a>
+                                        
+                                            <ul class="sub-menu">
+                                                
+                                                    <li>
+                                                        <a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">
+                                                            
+                                                                <i class="fa fa-code"></i>
+                                                            
+                                                            代码仓库
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a target="_blank" rel="noopener" href="https://wiki.krt.moe">
+                                                            
+                                                                <i class="fa fa-book"></i>
+                                                            
+                                                            项目文档
+                                                        </a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        
+                                    </li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">Kratos : Rebirth</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>Kratos : Rebirth</h2> <br />
+                        <span>一个可爱而现代的 Hexo 主题</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yiyezhiqiui.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">大物知识总结</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2024-11-21T16:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-11-22</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">yiyzhiqiu</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~5.46K
+                        
+                        字
+                    </li>
+                
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%AF%E5%8A%A8"><span class="toc-number">1.</span> <span class="toc-text">振动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.</span> <span class="toc-text">简谐运动的描述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8%E7%9A%84%E6%95%B0%E5%AD%A6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%BA"><span class="toc-number">1.1.1.</span> <span class="toc-text">简谐振动的数学表达式为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E5%BC%B9%E7%B0%A7%E6%8C%AF%E5%AD%90"><span class="toc-number">1.1.2.</span> <span class="toc-text">对于弹簧振子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8%E7%9A%84%E9%80%9F%E5%BA%A6%E6%96%B9%E7%A8%8B%E4%B8%BA"><span class="toc-number">1.1.3.</span> <span class="toc-text">简谐振动的速度方程为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8%E7%9A%84%E8%83%BD%E9%87%8F"><span class="toc-number">1.1.4.</span> <span class="toc-text">简谐振动的能量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8%E7%9A%84%E5%90%88%E6%88%90"><span class="toc-number">1.2.</span> <span class="toc-text">简谐运动的合成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E5%90%8C%E6%96%B9%E5%90%91%E3%80%81%E5%90%8C%E9%A2%91%E7%8E%87%E7%9A%84%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8%E7%9A%84%E5%90%88%E6%88%90"><span class="toc-number">1.2.1.</span> <span class="toc-text">两个同方向、同频率的简谐运动的合成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E5%90%8C%E6%96%B9%E5%90%91%E3%80%81%E4%B8%8D%E5%90%8C%E9%A2%91%E7%8E%87%E7%9A%84%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8%E7%9A%84%E5%90%88%E6%88%90"><span class="toc-number">1.2.2.</span> <span class="toc-text">两个同方向、不同频率的简谐运动的合成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%96%B9%E5%90%91%E5%9E%82%E7%9B%B4%E3%80%81%E9%A2%91%E7%8E%87%E7%9B%B8%E5%90%8C%E7%9A%84%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8%E7%9A%84%E5%90%88%E6%88%90"><span class="toc-number">1.2.3.</span> <span class="toc-text">两个方向垂直、频率相同的简谐振动的合成</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E6%B3%A2"><span class="toc-number">2.</span> <span class="toc-text">机械波</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-number">2.1.</span> <span class="toc-text">波的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E9%9D%A2%E7%AE%80%E8%B0%90%E6%B3%A2"><span class="toc-number">2.2.</span> <span class="toc-text">平面简谐波</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%B3%A2"><span class="toc-number">2.3.</span> <span class="toc-text">声波</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A2%E6%BA%90%E9%9D%99%E6%AD%A2"><span class="toc-number">2.3.1.</span> <span class="toc-text">波源静止</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%82%E5%AF%9F%E8%80%85%E9%9D%99%E6%AD%A2"><span class="toc-number">2.3.2.</span> <span class="toc-text">观察者静止</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A2%E6%BA%90%E5%92%8C%E8%A7%82%E5%AF%9F%E8%80%85%E5%9C%A8%E5%90%8C%E4%B8%80%E7%9B%B4%E7%BA%BF%E4%B8%8A%E8%BF%90%E5%8A%A8"><span class="toc-number">2.3.3.</span> <span class="toc-text">波源和观察者在同一直线上运动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A2%E7%9A%84%E8%A1%8D%E5%B0%84%E5%92%8C%E5%B9%B2%E6%B6%89"><span class="toc-number">2.4.</span> <span class="toc-text">波的衍射和干涉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A9%BB%E6%B3%A2"><span class="toc-number">2.5.</span> <span class="toc-text">驻波</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%89%E7%9A%84%E5%B9%B2%E6%B6%89"><span class="toc-number">3.</span> <span class="toc-text">光的干涉</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E6%B3%A2%E7%9A%84%E5%8F%A0%E5%8A%A0"><span class="toc-number">3.1.</span> <span class="toc-text">光波的叠加</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E7%A8%8B"><span class="toc-number">3.2.</span> <span class="toc-text">光程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A8%E6%B0%8F%E5%8F%8C%E7%BC%9D%E5%B9%B2%E6%B6%89"><span class="toc-number">3.3.</span> <span class="toc-text">杨氏双缝干涉</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%96%84%E8%86%9C%E5%B9%B2%E6%B6%89"><span class="toc-number">3.3.1.</span> <span class="toc-text">薄膜干涉</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%88%E5%B0%96%E5%B9%B2%E6%B6%89"><span class="toc-number">3.3.1.1.</span> <span class="toc-text">劈尖干涉</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%9B%E9%A1%BF%E7%8E%AF"><span class="toc-number">3.3.1.2.</span> <span class="toc-text">牛顿环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%88%E5%85%8B%E8%80%B3%E5%AD%99%E5%B9%B2%E6%B6%89%E4%BB%AA"><span class="toc-number">3.3.2.</span> <span class="toc-text">迈克耳孙干涉仪</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E7%9A%84%E8%A1%8D%E5%B0%84"><span class="toc-number">3.4.</span> <span class="toc-text">光的衍射</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%83%A0%E6%9B%B4%E6%96%AF-%E8%8F%B2%E6%B6%85%E8%80%B3%E5%8E%9F%E7%90%86"><span class="toc-number">3.4.1.</span> <span class="toc-text">惠更斯-菲涅耳原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E7%BC%9D%E7%9A%84%E5%A4%AB%E7%90%85%E7%A6%BE%E8%B4%B9%E8%A1%8D%E5%B0%84"><span class="toc-number">3.4.2.</span> <span class="toc-text">单缝的夫琅禾费衍射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%89%E5%AD%A6%E4%BB%AA%E5%99%A8%E7%9A%84%E5%88%86%E8%BE%A8%E6%9C%AC%E9%A2%86"><span class="toc-number">3.4.3.</span> <span class="toc-text">光学仪器的分辨本领</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8D%E5%B0%84%E5%85%89%E6%A0%85"><span class="toc-number">3.4.4.</span> <span class="toc-text">衍射光栅</span></a></li></ol></li></ol></li></ol>
+                </div>
+            
+            <hr />
+            <div itemprop="articleBody"><h1 id="振动"><a href="#振动" class="headerlink" title="振动"></a>振动</h1><h2 id="简谐运动的描述"><a href="#简谐运动的描述" class="headerlink" title="简谐运动的描述"></a>简谐运动的描述</h2><h3 id="简谐振动的数学表达式为"><a href="#简谐振动的数学表达式为" class="headerlink" title="简谐振动的数学表达式为"></a>简谐振动的数学表达式为</h3><p>$$x&#x3D;A\cos(\omega t+\phi)\<br>A&#x3D;\sqrt{x_0^2+(\frac{v_0}{\omega})^2} \<br>\phi&#x3D;\arccos(\frac{v_0}{A})<br>$$</p>
+<h3 id="对于弹簧振子"><a href="#对于弹簧振子" class="headerlink" title="对于弹簧振子"></a>对于弹簧振子</h3><p>$\omega&#x3D;\sqrt{\frac{k}{m}}$</p>
+<p>T&#x3D;$2\pi\sqrt{\frac{m}{k}}$</p>
+<h3 id="简谐振动的速度方程为"><a href="#简谐振动的速度方程为" class="headerlink" title="简谐振动的速度方程为"></a>简谐振动的速度方程为</h3><p>v&#x3D;$-A\omega\sin(\omega t+\phi)$</p>
+<h3 id="简谐振动的能量"><a href="#简谐振动的能量" class="headerlink" title="简谐振动的能量"></a>简谐振动的能量</h3><p>$E_k&#x3D;\frac{1}{2}mA^2\omega^2\sin^2(\omega t+\phi)$</p>
+<p>$E_p&#x3D;\frac{1}{2}kA^2\cos^2(\omega t+\phi)$</p>
+<p>一个周期内的平均势能和动能均为$\frac{1}{4}kA^2$</p>
+<p>总机械能为$\frac{1}{2}kA^2$</p>
+<h2 id="简谐运动的合成"><a href="#简谐运动的合成" class="headerlink" title="简谐运动的合成"></a>简谐运动的合成</h2><h3 id="两个同方向、同频率的简谐运动的合成"><a href="#两个同方向、同频率的简谐运动的合成" class="headerlink" title="两个同方向、同频率的简谐运动的合成"></a>两个同方向、同频率的简谐运动的合成</h3><p>$x_1&#x3D;A_1\cos(\omega t+ \phi_{10})$</p>
+<p>$x_2&#x3D;A_2\cos(\omega t+ \phi_{20})$</p>
+<p>$x_&#x3D;A\cos(\omega t+ \phi_0)$</p>
+<p>$$<br>\begin{cases}<br>A&#x3D;\sqrt{A_1^2+A_2^2+2A_1A_2\cos(\phi_{10}-\phi_{20})}\<br>\phi_0&#x3D;\arctan(\frac{A_1\sin\phi_{10}+A_2\sin\phi_{20}}{A_1\cos\phi_{10}+A_2\cos\phi_{20}})<br>\end{cases}<br>$$</p>
+<h3 id="两个同方向、不同频率的简谐运动的合成"><a href="#两个同方向、不同频率的简谐运动的合成" class="headerlink" title="两个同方向、不同频率的简谐运动的合成"></a>两个同方向、不同频率的简谐运动的合成</h3><p>$x_1&#x3D;A_1\cos(\omega_1 t+ \phi_{10})$</p>
+<p>$x_2&#x3D;A_2\cos(\omega_2 t+ \phi_{20})$</p>
+<p>$x&#x3D;2A\cos(\frac{\omega_1-\omega_2}{2}+\frac{\phi_{10}-\phi_{20}}{2})\cos(\frac{\omega_1+\omega_2}{2}+\frac{\phi_{10}+\phi_{20}}{2})$</p>
+<h3 id="两个方向垂直、频率相同的简谐振动的合成"><a href="#两个方向垂直、频率相同的简谐振动的合成" class="headerlink" title="两个方向垂直、频率相同的简谐振动的合成"></a>两个方向垂直、频率相同的简谐振动的合成</h3><p>$x_1&#x3D;A_1\cos(\omega t+ \phi_{10})$</p>
+<p>$x_2&#x3D;A_2\cos(\omega t+ \phi_{20})$</p>
+<p>将两式联立得到</p>
+<p>$\frac{x^2}{A_1^2}+\frac{y^2}{A_2^2}-\frac{2xy}{A_1A_2}\cos(\phi_{20}-\phi_{10})&#x3D;\sin^2(\phi_{20}-\phi_{10})$</p>
+<p>(1)当相位差$\phi_{20}-\phi_{10}&#x3D;0$时，可得</p>
+<p>$\frac{x}{A_1}&#x3D;\frac{y}{A_2}$</p>
+<p>(2)当相位差$\phi_{20}-\phi_{10}&#x3D;\pm\pi$时，可得</p>
+<p>$\frac{x}{A_1}&#x3D;-\frac{y}{A_2}$</p>
+<p>(3)当相位差$\phi_{20}-\phi_{10}&#x3D;\pm\frac{\pi}{2}$时，可得</p>
+<p>$\frac{x^2}{A_1^2}+\frac{y^2}{A_2^2}&#x3D;1$</p>
+<h1 id="机械波"><a href="#机械波" class="headerlink" title="机械波"></a>机械波</h1><h2 id="波的基本概念"><a href="#波的基本概念" class="headerlink" title="波的基本概念"></a>波的基本概念</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">横波:质点的振动方向和波动的传播方向垂直</span><br><span class="line">纵波:质点的振动方向和波动的传播方向平行</span><br></pre></td></tr></table></figure>
+
+<p>频率有振源决定，波速取决于介质，波长则由介质和振源共同决定</p>
+<h2 id="平面简谐波"><a href="#平面简谐波" class="headerlink" title="平面简谐波"></a>平面简谐波</h2><p>$u&#x3D;\upsilon\lambda$</p>
+<p>平面简谐波的函数为</p>
+<p>$y(x,t)&#x3D;A\cos[\omega(t\pm\frac{x}{u})+\phi]$</p>
+<p>+号表示延x轴负方向传播，-表示延x轴正方向传播</p>
+<p>$y(x,t)&#x3D;A\cos[2\pi(\upsilon t-\frac{x}{\lambda})+\phi]$</p>
+<p>$y(x,t)&#x3D;A\cos[2\pi(\frac{t}{T}-\frac{x}{\lambda})+\phi]$</p>
+<p>质点的势能和动能的表达式一样，均为</p>
+<p>$\Delta E_k&#x3D;\frac{1}{2}\rho\Delta V\omega^2A^2sin^2[\omega(t-\frac{x}{u}+\phi)]$</p>
+<p>波的强度</p>
+<p>$I&#x3D;\frac{1}{2}\rho\omega^2A^2u$</p>
+<p>平面波在无吸收的均匀介质中传播，通过每一波面的平均能流相等，波的强度相等，因而每个波面的振幅相等即</p>
+<p>$I_1S_1&#x3D;I_2S_2$<br>由此得$\frac{A_1}{A_2}&#x3D;\frac{r_2}{r_1}$</p>
+<h2 id="声波"><a href="#声波" class="headerlink" title="声波"></a>声波</h2><h3 id="波源静止"><a href="#波源静止" class="headerlink" title="波源静止"></a>波源静止</h3><p>观察者以速度$v_s$相对于介质运动，接收到的频率为$\upsilon_R&#x3D;\frac{u+v_R}{u}\upsilon_s$</p>
+<p>当观察者远离时，接收到的频率为$\upsilon_R&#x3D;\frac{u-v_R}{u}\upsilon_s$</p>
+<h3 id="观察者静止"><a href="#观察者静止" class="headerlink" title="观察者静止"></a>观察者静止</h3><p>波源以速度v_s向观察者运动，接受到的频率为$\upsilon_R&#x3D;\frac{u}{u-v_s}\upsilon_S$</p>
+<p>当波源远离时，接受到的频率为$\upsilon_R&#x3D;\frac{u}{u+v_s}\upsilon_S$</p>
+<h3 id="波源和观察者在同一直线上运动"><a href="#波源和观察者在同一直线上运动" class="headerlink" title="波源和观察者在同一直线上运动"></a>波源和观察者在同一直线上运动</h3><p>相向而行$v_R&#x3D;\frac{u+v_R}{u-v_s}\upsilon_s$</p>
+<p>彼此分开$v_R&#x3D;\frac{u-v_R}{u+v_s}\upsilon_s$</p>
+<h2 id="波的衍射和干涉"><a href="#波的衍射和干涉" class="headerlink" title="波的衍射和干涉"></a>波的衍射和干涉</h2><p>$\Delta\phi&#x3D;\pm2k\pi$时，干涉加强</p>
+<p>$\Delta\phi&#x3D;\pm(2k+1)\pi$时，干涉减弱</p>
+<h2 id="驻波"><a href="#驻波" class="headerlink" title="驻波"></a>驻波</h2><p>$y_1&#x3D;A\cos(2\pi\upsilon t+\phi_1-2\pi\frac{x}{\lambda})$</p>
+<p>$y_2&#x3D;A\cos(2\pi\upsilon t+\phi_2+2\pi\frac{x}{\lambda})$</p>
+<p>$y&#x3D;2A\cos(2\pi\frac{x}{\lambda}+\frac{\phi_2+\phi_1}{2})\cos(2\pi\upsilon t+\frac{\phi_2-\phi_1}{2})$</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">半波损失：波从波疏介质传播到波密介质界面上反射时有半波损失</span><br></pre></td></tr></table></figure>
+
+<h1 id="光的干涉"><a href="#光的干涉" class="headerlink" title="光的干涉"></a>光的干涉</h1><h2 id="光波的叠加"><a href="#光波的叠加" class="headerlink" title="光波的叠加"></a>光波的叠加</h2><p>两列光满足频率相同、振动方向平行、相位差恒定条件时，光波叠加区域会产生干涉现象。普通的两个光源不产生干涉现象，如两盏电灯间不发生干涉现象</p>
+<h2 id="光程"><a href="#光程" class="headerlink" title="光程"></a>光程</h2><p>光程：在相同时间内，光在介质n中传播距离r引起的相位变化，计算方法为nr<br>相位差与光程差的关系为$\Delta\phi&#x3D;\frac{2\pi}{\lambda}\delta$</p>
+<h2 id="杨氏双缝干涉"><a href="#杨氏双缝干涉" class="headerlink" title="杨氏双缝干涉"></a>杨氏双缝干涉</h2><p>$\frac{\delta}{d}&#x3D;\frac{x}{D}$</p>
+<p>$\delta$为光程差，d为双缝间的距离，x为干涉条纹到双缝垂直平分线的距离，D为双缝到光屏的距离</p>
+<p>干涉相长满足:</p>
+<p>$$<br>\begin{cases}<br>\Delta\phi&#x3D;\pm 2k\pi\<br>\delta&#x3D;\pm k\lambda<br>\end{cases}<br>$$</p>
+<p>干涉相消满足:</p>
+<p>$$<br>\begin{cases}<br>\Delta\phi&#x3D;\pm (2k-1)\pi\<br>\delta&#x3D;\pm (2k-1)k\frac{\lambda}{2}<br>\end{cases}<br>$$</p>
+<p>$x_明&#x3D;\pm k\lambda\frac{D}{d}$</p>
+<p>$x_暗&#x3D;\pm (2k-1)\frac{\lambda}{2}\frac{D}{d}$</p>
+<p>相邻两明纹中心或暗纹中心的间距为$\Delta x&#x3D;\frac{D}{d}\lambda$</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(1)单色光入射时，出现以屏中央零级明条纹中心为对称的等宽、</span><br><span class="line">等间距的明暗相间的干涉条纹。</span><br><span class="line">(2)若以白光入射，即混合光源，则各个波长的零级明条纹中心在同一处，混合后仍为白光(δ=0)。这就是说，非零级明条纹会呈现彩色条纹，在高级次明条纹中还会出现不同色条的重叠现象。波长越短越靠近零级中心，高级次彩色条纹会出现不同波长干涉条纹的重叠现象，也称作干涉光谱</span><br><span class="line">(3)狭缝S的上下移动，会引起干涉条纹向相反方向移动。用透明介质薄膜遮去双缝中的一条缝，也会引起干涉条纹的变动。</span><br><span class="line">(4)两缝间距d越小，入射波长λ越大，缝到屏间距离越大，干涉条纹分的越开，干涉现象月明显。</span><br></pre></td></tr></table></figure>
+
+<h3 id="薄膜干涉"><a href="#薄膜干涉" class="headerlink" title="薄膜干涉"></a>薄膜干涉</h3><p>$当n_1&gt;n_2&lt;n_3或者n_1<n_2>n_3时$</p>
+<p>光程差为$\delta&#x3D;2n_2h\cos i+\frac{\lambda}{2}$</p>
+<h4 id="劈尖干涉"><a href="#劈尖干涉" class="headerlink" title="劈尖干涉"></a>劈尖干涉</h4><p>$\delta&#x3D;2n_2h\cos i+\frac{\lambda}{2}$&#x3D;$\begin{cases}<br>k\lambda,明纹中心\<br>(2k-1)\frac{\lambda}{2}，暗纹中心<br>\end{cases}$</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(1)相邻明条纹或暗条纹对应的薄膜厚度Δh=λ/2n</span><br><span class="line">(2)明条纹或暗条纹的宽度a=λ/2nsini</span><br><span class="line">(3)i增大，条纹间距减小(变密)；i减小，条纹间距增大(变疏)</span><br><span class="line">(4)若i不变，两表面远离，条纹向内平移；两表面靠近，条纹向外平移</span><br></pre></td></tr></table></figure>
+
+<h4 id="牛顿环"><a href="#牛顿环" class="headerlink" title="牛顿环"></a>牛顿环</h4><p>h为0，光程差为λ&#x2F;2，是零级暗条纹中心。越往外，干涉条纹分布越密</p>
+<p>$\delta&#x3D;2nh+\frac{\lambda}{2}$</p>
+<p>$h&#x3D;\frac{r^2}{2R}$​</p>
+<p>可得<br>$n\frac{r^2}{R}+\frac{\lambda}{2}&#x3D;\begin{cases}<br>    2k\frac{\lambda}{2},明纹中心\<br>    (2k+1)\frac{\lambda}{2},暗纹中心<br>\end{cases}$</p>
+<p>明环的半径为$r&#x3D;\sqrt{(2k-1)\frac{R\lambda}{2n}}$</p>
+<p>暗环的半径为$r&#x3D;\sqrt{k\frac{R\lambda}{n}}$</p>
+<p>圆环间距为$a&#x3D;\frac{\lambda}{2sini}$</p>
+<h3 id="迈克耳孙干涉仪"><a href="#迈克耳孙干涉仪" class="headerlink" title="迈克耳孙干涉仪"></a>迈克耳孙干涉仪</h3><p>(1)斜入射的光线，其光程差会随着倾角的增大而减小，因此条纹越往外级数越低，中央是最高级，与牛顿环相反</p>
+<p>(2)中央干涉条纹，光程差为$\delta&#x3D;2h&#x3D;k\lambda$</p>
+<p>(3)中央场冒出或消失N个条纹和h的变化关系：$2\Delta h&#x3D;N\lambda$</p>
+<p>(4)中心条纹数目的变化多少反映了光程差的变化大小</p>
+<h2 id="光的衍射"><a href="#光的衍射" class="headerlink" title="光的衍射"></a>光的衍射</h2><h3 id="惠更斯-菲涅耳原理"><a href="#惠更斯-菲涅耳原理" class="headerlink" title="惠更斯-菲涅耳原理"></a>惠更斯-菲涅耳原理</h3><p>菲涅耳接受了惠更斯的次波概念，并根据波的叠加和干涉原理。提出了”次波相干叠加”概念。此原理课表述为:从同一波面上各点发出的次波(子波)是相干波，经过传播，在空间某点相遇时的叠加是相干叠加。</p>
+<h3 id="单缝的夫琅禾费衍射"><a href="#单缝的夫琅禾费衍射" class="headerlink" title="单缝的夫琅禾费衍射"></a>单缝的夫琅禾费衍射</h3><p>若$\delta&#x3D;asin\phi&#x3D;k\frac{\lambda}{2}$这相当于把BC分成$\frac{\lambda}{2}$宽度的k等分。相邻波带的中心及各对应点发出的光到P点的光程差均为$\frac{\lambda}{2}$,因此这些波带称为半波带</p>
+<p>中央明纹的角宽度$\Delta\phi_0&#x3D;2\frac{\lambda}{a}$</p>
+<p>线宽度为$\Delta x_0&#x3D;2f\frac{\lambda}{a}$</p>
+<p>其他明纹的角宽度$\Delta\phi_0&#x3D;\frac{\lambda}{a}$</p>
+<p>线宽度为$\Delta x_0&#x3D;f\frac{\lambda}{a}$</p>
+<p>单缝宽度a越小，入射光波波长$\lambda$越大，明纹的角宽度和线宽度越大，衍射越明显</p>
+<p>透镜的位置不变而使单缝的位置上下微笑移动，衍射图样的位置不变</p>
+<p>复色光入射，中央0级明条纹中心仍为复色光的混合，其他级明条纹呈现彩色。$\lambda$越小的色条越靠近中心位置。高级次彩色条纹将出现重叠。</p>
+<h3 id="光学仪器的分辨本领"><a href="#光学仪器的分辨本领" class="headerlink" title="光学仪器的分辨本领"></a>光学仪器的分辨本领</h3><p>衍射形成的额中央是明亮园斑，称为艾里斑，占入射光强的84%，半角宽度$\theta_0&#x3D;1.22\frac{\lambda}{D}$</p>
+<p>光学系统的最小分辨角为$\delta\theta&#x3D;1.22\frac{\lambda}{D}$,分辨率为R&#x3D;$\frac{D}{1.22\lambda}$</p>
+<h3 id="衍射光栅"><a href="#衍射光栅" class="headerlink" title="衍射光栅"></a>衍射光栅</h3><p>光栅常数d&#x3D;a+b，a为狭缝，b为不透光的部分</p>
+<p>满足$d\sin\phi&#x3D;\pm k\lambda$,k为明条纹级数</p>
+<p>缺级条纹的$k_1和明条纹二点k的关系为k_0&#x3D;\frac{a+b}{a}k$</p>
+<p>在光栅衍射中，相邻两主极大之间还有一些暗条纹。这些暗条纹满足$(a+b)sin\phi&#x3D;(k+\frac{n}{N})\lambda$,k为主极大级数，N为光栅缝总数，n为正整数，取值为n&#x3D;1，2，3……n-1</p>
+</div>
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <span itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</span>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                    <a class="donate" href="javascript:;" onclick="krOpenDonateModal()"><i class="fa fa-bitcoin"></i> 打赏</a>
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/%E6%AC%A2%E8%BF%8E/" rel="tag">欢迎</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2024-11-29T05:45:32.890Z" itemprop="dateModified">最后编辑：2024-11-29</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 概率论知识总结" href="/posts/概率论/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+            <div class="nav-next clearfix">
+                <a title=" 信号分析处理与分析" href="/posts/信号分析与处理/">下一篇 <i class="fa fa-angle-right"></i></a>
+            </div>
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/user.svg" alt="All contributors" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">欢迎使用这个主题，希望能给您带来美好的体验。</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                4
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                2
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                1
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%8C%AF%E5%8A%A8"><span class="toc-text">振动</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="toc-text">简谐运动的描述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8%E7%9A%84%E6%95%B0%E5%AD%A6%E8%A1%A8%E8%BE%BE%E5%BC%8F%E4%B8%BA"><span class="toc-text">简谐振动的数学表达式为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%AF%B9%E4%BA%8E%E5%BC%B9%E7%B0%A7%E6%8C%AF%E5%AD%90"><span class="toc-text">对于弹簧振子</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8%E7%9A%84%E9%80%9F%E5%BA%A6%E6%96%B9%E7%A8%8B%E4%B8%BA"><span class="toc-text">简谐振动的速度方程为</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8%E7%9A%84%E8%83%BD%E9%87%8F"><span class="toc-text">简谐振动的能量</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8%E7%9A%84%E5%90%88%E6%88%90"><span class="toc-text">简谐运动的合成</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E5%90%8C%E6%96%B9%E5%90%91%E3%80%81%E5%90%8C%E9%A2%91%E7%8E%87%E7%9A%84%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8%E7%9A%84%E5%90%88%E6%88%90"><span class="toc-text">两个同方向、同频率的简谐运动的合成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E5%90%8C%E6%96%B9%E5%90%91%E3%80%81%E4%B8%8D%E5%90%8C%E9%A2%91%E7%8E%87%E7%9A%84%E7%AE%80%E8%B0%90%E8%BF%90%E5%8A%A8%E7%9A%84%E5%90%88%E6%88%90"><span class="toc-text">两个同方向、不同频率的简谐运动的合成</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%A4%E4%B8%AA%E6%96%B9%E5%90%91%E5%9E%82%E7%9B%B4%E3%80%81%E9%A2%91%E7%8E%87%E7%9B%B8%E5%90%8C%E7%9A%84%E7%AE%80%E8%B0%90%E6%8C%AF%E5%8A%A8%E7%9A%84%E5%90%88%E6%88%90"><span class="toc-text">两个方向垂直、频率相同的简谐振动的合成</span></a></li></ol></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E6%9C%BA%E6%A2%B0%E6%B3%A2"><span class="toc-text">机械波</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A2%E7%9A%84%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5"><span class="toc-text">波的基本概念</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%B9%B3%E9%9D%A2%E7%AE%80%E8%B0%90%E6%B3%A2"><span class="toc-text">平面简谐波</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%A3%B0%E6%B3%A2"><span class="toc-text">声波</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A2%E6%BA%90%E9%9D%99%E6%AD%A2"><span class="toc-text">波源静止</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A7%82%E5%AF%9F%E8%80%85%E9%9D%99%E6%AD%A2"><span class="toc-text">观察者静止</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%A2%E6%BA%90%E5%92%8C%E8%A7%82%E5%AF%9F%E8%80%85%E5%9C%A8%E5%90%8C%E4%B8%80%E7%9B%B4%E7%BA%BF%E4%B8%8A%E8%BF%90%E5%8A%A8"><span class="toc-text">波源和观察者在同一直线上运动</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%B3%A2%E7%9A%84%E8%A1%8D%E5%B0%84%E5%92%8C%E5%B9%B2%E6%B6%89"><span class="toc-text">波的衍射和干涉</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E9%A9%BB%E6%B3%A2"><span class="toc-text">驻波</span></a></li></ol></li><li class="toc-item toc-level-1"><a class="toc-link" href="#%E5%85%89%E7%9A%84%E5%B9%B2%E6%B6%89"><span class="toc-text">光的干涉</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E6%B3%A2%E7%9A%84%E5%8F%A0%E5%8A%A0"><span class="toc-text">光波的叠加</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E7%A8%8B"><span class="toc-text">光程</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%9D%A8%E6%B0%8F%E5%8F%8C%E7%BC%9D%E5%B9%B2%E6%B6%89"><span class="toc-text">杨氏双缝干涉</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%96%84%E8%86%9C%E5%B9%B2%E6%B6%89"><span class="toc-text">薄膜干涉</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%8A%88%E5%B0%96%E5%B9%B2%E6%B6%89"><span class="toc-text">劈尖干涉</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E7%89%9B%E9%A1%BF%E7%8E%AF"><span class="toc-text">牛顿环</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%BF%88%E5%85%8B%E8%80%B3%E5%AD%99%E5%B9%B2%E6%B6%89%E4%BB%AA"><span class="toc-text">迈克耳孙干涉仪</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E5%85%89%E7%9A%84%E8%A1%8D%E5%B0%84"><span class="toc-text">光的衍射</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%83%A0%E6%9B%B4%E6%96%AF-%E8%8F%B2%E6%B6%85%E8%80%B3%E5%8E%9F%E7%90%86"><span class="toc-text">惠更斯-菲涅耳原理</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%8D%95%E7%BC%9D%E7%9A%84%E5%A4%AB%E7%90%85%E7%A6%BE%E8%B4%B9%E8%A1%8D%E5%B0%84"><span class="toc-text">单缝的夫琅禾费衍射</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E5%85%89%E5%AD%A6%E4%BB%AA%E5%99%A8%E7%9A%84%E5%88%86%E8%BE%A8%E6%9C%AC%E9%A2%86"><span class="toc-text">光学仪器的分辨本领</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E8%A1%8D%E5%B0%84%E5%85%89%E6%A0%85"><span class="toc-text">衍射光栅</span></a></li></ol></li></ol></li></ol>
+    </div>
+</aside>
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%A8%E6%96%B0%E4%BD%93%E9%AA%8C/">全新体验</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">学习资料</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/%E6%AC%A2%E8%BF%8E/" style="font-size: 0.6em;">欢迎</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/posts/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/"><i class="fa fa-book"></i> 信号分析处理与分析</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/"><i class="fa fa-book"></i> 大物知识总结</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/posts/%E6%A6%82%E7%8E%87%E8%AE%BA/"><i class="fa fa-book"></i> 概率论知识总结</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/posts/hello-world/"><i class="fa fa-book"></i> 你好，世界！</a>
+            
+          
+        
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                            <li>
+                                <a href="https://github.com/kratos-rebirth" target="_blank" rel="nofollow">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/atom.xml" target="_blank" rel="nofollow">
+                                    <i class="fa fa-rss"></i>
+                                </a>
+                            </li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 Kratos : Rebirth 版权所有.</li>
+                            <li>本站已在风雨中飘摇<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 <a href="https://github.com/Candinya/Kratos-Rebirth/graphs/contributors" target="_blank">All contributors</a> 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                            <div>
+                                
+                                    <li>由 <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a> 强力驱动</li>
+                                
+                                    <li>在 <a href="https://github.io" target="_blank">Github Pages</a> 暖心托管</li>
+                                
+                            </div>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">赞助喵</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">非常感谢您的喜欢！ <i class="fa fa-heart" style="color:#d43f57"></i></div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+                    <img class="kr-donate-placeholder" src="https://dev.krt.moe/demo-assets/donate.webp" alt="赞助喵" />
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+                    
+                        <button class="kr-donate-platform-button" style="color: skyblue;" title="模拟支付" onclick="krDonateModalShowPlatformQR('example_payment', 'skyblue')">
+                            <i class="fa fa-credit-card"></i>
+                        </button>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享这一刻</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">让朋友们也来瞅瞅！</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+                    <button class="kr-share-platform-button" style="color: #62b6e7;" title="喵窝" onclick="krShareModalOpenPlatform('https://nya.one/share?text=%3E%20$TITLE%0A%3E%0A%3E%20$SUMMARY%0A----%20$SITE%0A%0A$URL')">
+                        <svg fill="currentColor" width="18" height="18" viewBox="0 0 329 388"><path d="M0,36.226c0,-19.993 16.233,-36.226 36.226,-36.226c13.788,0 25.787,7.719 31.908,19.068l188.366,229.845l0,-111.259c-6.356,5.508 -14.645,8.843 -23.707,8.843c-19.994,0 -36.226,-16.232 -36.226,-36.226c-0,-8.551 2.968,-16.413 7.93,-22.613l-0.015,-0.013l56.614,-69.08c6.2,-11.073 18.047,-18.565 31.63,-18.565c19.994,0 36.227,16.233 36.227,36.226l-0,314.644c-0,19.994 -16.233,36.226 -36.227,36.226c-13.166,0 -24.701,-7.039 -31.044,-17.555l-189.229,-230.899l-0,212.228c-0,19.994 -16.233,36.226 -36.227,36.226c-19.993,0 -36.226,-16.232 -36.226,-36.226l0,-314.644Z" /></svg>
+                    </button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+
+    </body>
+</html>

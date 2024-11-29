@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="zh">
+    <head>
+  <!-- 元数据 -->
+  <meta charset="utf-8">
+  
+    <link rel="icon" href="/assets/favicon.png">
+  
+  
+  <title>信号分析处理与分析 | Kratos : Rebirth</title>
+  <link rel="canonical" href="http://yiyezhiqiui.github.io/posts/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/">
+  <meta name="author" content="yiyzhiqiu" />
+  <meta http-equiv="Cache-Control" content="no-transform" />
+  <meta http-equiv="Cache-Control" content="no-siteapp" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="robots" content="index,follow" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+  <meta name="format-detection" content="telphone=no, email=no" />
+  
+    <meta name="keywords" content="欢迎" />
+  
+  <meta name="description" content="第一章 连续信号的分析第一节连续信号的时域描述和分析一、连续信号的时域描述(一)普通信号的时域描述1.正弦信号$ x(t)&#x3D;A\sin(\omega_0 t+\phi_0)&#x3D;A\cos(\omega_0 t+\phi_0-\frac{\pi}{2})    -\infty&lt;t&lt;\infty$ 2.指数信号$x(t)&#x3D;Ae^{st}  -\infty&lt;">
+<meta property="og:type" content="article">
+<meta property="og:title" content="信号分析处理与分析">
+<meta property="og:url" content="http://yiyezhiqiui.github.io/posts/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/index.html">
+<meta property="og:site_name" content="Kratos : Rebirth">
+<meta property="og:description" content="第一章 连续信号的分析第一节连续信号的时域描述和分析一、连续信号的时域描述(一)普通信号的时域描述1.正弦信号$ x(t)&#x3D;A\sin(\omega_0 t+\phi_0)&#x3D;A\cos(\omega_0 t+\phi_0-\frac{\pi}{2})    -\infty&lt;t&lt;\infty$ 2.指数信号$x(t)&#x3D;Ae^{st}  -\infty&lt;">
+<meta property="og:locale">
+<meta property="og:image" content="http://yiyezhiqiui.github.io/images/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/1.png">
+<meta property="og:image" content="http://yiyezhiqiui.github.io/images/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/2.png">
+<meta property="article:published_time" content="2024-11-21T16:00:00.000Z">
+<meta property="article:modified_time" content="2024-11-29T05:56:18.887Z">
+<meta property="article:author" content="All contributors">
+<meta property="article:tag" content="欢迎">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yiyezhiqiui.github.io/images/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/1.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Kratos : Rebirth" type="application/atom+xml">
+  
+  <!-- 样式表文件 -->
+  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
+  
+  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
+  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
+  <script src="/js/kr-theme.min.js"></script>
+  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
+  
+    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
+  
+  
+    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
+  
+  <!-- 不得不预先加载的一些JS文件 -->
+  
+    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
+  
+  <!-- 自定义站点横幅和背景 -->
+  <style>
+    
+      .kratos-cover.kratos-cover-2 {
+        background-image: url('https://dev.krt.moe/demo-assets/banner.webp');
+      }
+      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
+        background-image: url('https://dev.krt.moe/demo-assets/banner_dark.webp');
+      }
+    
+    
+      @media(min-width:768px) {
+        body.custom-background {
+          background-image: url('https://dev.krt.moe/demo-assets/bg.webp');
+        }
+        html[data-theme="dark"] body.custom-background {
+          background-image: url('https://dev.krt.moe/demo-assets/bg.webp');
+        }
+      }
+    
+    
+      .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+      html[data-theme="dark"] .widget-kratos-about .photo-background {
+        background-image: url('/images/default.webp');
+      }
+    
+  </style>
+
+  <!-- 额外的追加注入项 -->
+  
+<meta name="generator" content="Hexo 7.3.0"></head>
+
+    <body class="custom-background">
+        <div id="kratos-wrapper">
+    <div id="kratos-page">
+        <div id="kratos-header">
+            <header id="kratos-desktop-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="nav-header">
+                        <nav id="kratos-menu-wrap">
+                            <ul id="kratos-primary-menu" class="sf-menu">
+                                
+                                    <li>
+                                        
+                                            <a href="/">
+                                        
+                                            
+                                                <i class="fa fa-home"></i>
+                                            
+                                            首页
+                                        </a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a href="/archives/">
+                                        
+                                            
+                                                <i class="fa fa-file"></i>
+                                            
+                                            档案馆
+                                        </a>
+                                        
+                                    </li>
+                                
+                                    <li>
+                                        
+                                            <a>
+                                        
+                                            
+                                                <i class="fa fa-link"></i>
+                                            
+                                            链接
+                                        </a>
+                                        
+                                            <ul class="sub-menu">
+                                                
+                                                    <li>
+                                                        <a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">
+                                                            
+                                                                <i class="fa fa-code"></i>
+                                                            
+                                                            代码仓库
+                                                        </a>
+                                                    </li>
+                                                
+                                                    <li>
+                                                        <a target="_blank" rel="noopener" href="https://wiki.krt.moe">
+                                                            
+                                                                <i class="fa fa-book"></i>
+                                                            
+                                                            项目文档
+                                                        </a>
+                                                    </li>
+                                                
+                                            </ul>
+                                        
+                                    </li>
+                                
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </header>
+            <header id="kratos-mobile-topnav" class="kratos-topnav">
+                <div class="container">
+                    <div class="color-logo"><a href="/">Kratos : Rebirth</a></div>
+                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
+                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
+                            <i></i>
+                        </a>
+                    </div>
+                </div>
+            </header>
+        </div>
+        <div class="kratos-start kratos-hero-2">
+            <!-- <div class="kratos-overlay"></div> -->
+            <div class="kratos-cover kratos-cover-2 text-center">
+                <div class="desc desc2 animate-box">
+                    <a href="/">
+                        <h2>Kratos : Rebirth</h2> <br />
+                        <span>一个可爱而现代的 Hexo 主题</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div id="kratos-blog-post">
+            <div class="container">
+                <div id="main" class="row">
+
+
+        
+
+            
+
+            <section class="kr-main-col col-md-8">
+
+        
+
+            <article itemscope itemtype="https://schema.org/Article">
+    <link itemprop="mainEntityOfPage" href="http://yiyezhiqiui.github.io/posts/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/">
+    <div class="kratos-hentry kratos-page-inner clearfix">
+        <header class="kratos-page-header">
+            
+                <h1 class="kratos-page-title text-center" itemprop="name headline">信号分析处理与分析</h1>
+            
+            <ul class="kratos-page-meta text-center">
+                <li><time datetime="2024-11-21T16:00:00.000Z" itemprop="datePublished"><i class="fa fa-calendar"></i> 2024-11-22</time></li>
+                <li itemprop="author" itemscope itemtype="https://schema.org/Person">
+                    <i class="fa fa-user"></i> 作者 <span itemprop="name">yiyzhiqiu</span>
+                </li>
+                
+                    <li>
+                        <i class="fa fa-edit"></i> 
+                        
+                        
+                            ~1.95K
+                        
+                        字
+                    </li>
+                
+                
+                
+            </ul>
+        </header>
+        <div class="kratos-page-content kr-post">
+            
+            
+            
+                <div class="kratos-post-inner-toc toc-div-class" >
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%88%86%E6%9E%90"><span class="toc-number">1.</span> <span class="toc-text">第一章 连续信号的分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E6%8F%8F%E8%BF%B0%E5%92%8C%E5%88%86%E6%9E%90"><span class="toc-number">1.1.</span> <span class="toc-text">第一节连续信号的时域描述和分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.1.</span> <span class="toc-text">一、连续信号的时域描述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E6%99%AE%E9%80%9A%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.1.1.</span> <span class="toc-text">(一)普通信号的时域描述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%AD%A3%E5%BC%A6%E4%BF%A1%E5%8F%B7"><span class="toc-number">1.1.1.1.1.</span> <span class="toc-text">1.正弦信号</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%8C%87%E6%95%B0%E4%BF%A1%E5%8F%B7"><span class="toc-number">1.1.1.1.2.</span> <span class="toc-text">2.指数信号</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E5%A5%87%E5%BC%82%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="toc-number">1.1.1.2.</span> <span class="toc-text">(二)奇异信号的描述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%8D%95%E4%BD%8D%E6%96%9C%E5%9D%A1%E4%BF%A1%E5%8F%B7"><span class="toc-number">1.1.1.2.1.</span> <span class="toc-text">1.单位斜坡信号</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%8D%95%E4%BD%8D%E6%96%9C%E5%9D%A1%E4%BF%A1%E5%8F%B7"><span class="toc-number">1.1.1.2.2.</span> <span class="toc-text">2.单位斜坡信号</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%8D%95%E4%BD%8D%E5%86%B2%E6%BF%80%E4%BF%A1%E5%8F%B7"><span class="toc-number">1.1.1.2.3.</span> <span class="toc-text">3.单位冲激信号</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90"><span class="toc-number">1.1.2.</span> <span class="toc-text">二、连续信号的时域分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97"><span class="toc-number">1.1.2.1.</span> <span class="toc-text">(一)基本运算</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%B0%BA%E5%BA%A6%E5%8F%98%E6%8D%A2"><span class="toc-number">1.1.2.1.1.</span> <span class="toc-text">1.尺度变换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%BF%BB%E8%BD%AC"><span class="toc-number">1.1.2.1.2.</span> <span class="toc-text">2.翻转</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%B9%B3%E7%A7%BB"><span class="toc-number">1.1.2.1.3.</span> <span class="toc-text">3.平移</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E5%8F%A0%E5%8A%A0%E5%92%8C%E7%9B%B8%E4%B9%98"><span class="toc-number">1.1.2.2.</span> <span class="toc-text">(二)叠加和相乘</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-%E5%BE%AE%E5%88%86%E5%92%8C%E7%A7%AF%E5%88%86"><span class="toc-number">1.1.2.3.</span> <span class="toc-text">(三)微分和积分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-%E5%8D%B7%E7%A7%AF%E8%BF%90%E7%AE%97"><span class="toc-number">1.1.2.4.</span> <span class="toc-text">(三)卷积运算</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90"><span class="toc-number">1.1.3.</span> <span class="toc-text">三、连续信号的时域分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%88%86%E8%A7%A3%E6%88%90%E5%86%B2%E6%BF%80%E5%87%BD%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="toc-number">1.1.3.1.</span> <span class="toc-text">(一)分解成冲激函数之和</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E6%AD%A3%E4%BA%A4%E5%88%86%E8%A7%A3"><span class="toc-number">1.1.3.2.</span> <span class="toc-text">(二)正交分解</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%AD%A3%E4%BA%A4%E5%87%BD%E6%95%B0%E9%9B%86"><span class="toc-number">1.1.3.2.1.</span> <span class="toc-text">1.正交函数集</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%AD%A3%E4%BA%A4%E5%88%86%E8%A7%A3"><span class="toc-number">1.1.3.2.2.</span> <span class="toc-text">2.信号的正交分解</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82-%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E5%9F%9F%E5%88%86%E6%9E%90"><span class="toc-number">1.2.</span> <span class="toc-text">第二节 连续信号的频域分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%E5%88%86%E6%9E%90"><span class="toc-number">1.2.1.</span> <span class="toc-text">一、周期信号的频谱分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80%E5%BC%8F"><span class="toc-number">1.2.1.1.</span> <span class="toc-text">(一)周期信号的的傅里叶级数展开式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1"><span class="toc-number">1.2.1.2.</span> <span class="toc-text">(二)周期信号的频谱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%8A%9F%E7%8E%87%E5%88%86%E9%85%8D"><span class="toc-number">1.2.1.3.</span> <span class="toc-text">(三)周期信号的功率分配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B-%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E8%BF%91%E4%BC%BC"><span class="toc-number">1.2.1.4.</span> <span class="toc-text">(四)周期信号的傅里叶级数近似</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%9D%9E%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%E5%88%86%E6%9E%90"><span class="toc-number">1.2.2.</span> <span class="toc-text">二、非周期信号的频谱分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E4%BB%8E%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%88%B0%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-number">1.2.2.1.</span> <span class="toc-text">(一)从傅里叶级数到傅里叶变换</span></a></li></ol></li></ol></li></ol></li></ol>
+                </div>
+            
+            <hr />
+            <div itemprop="articleBody"><h1 id="第一章-连续信号的分析"><a href="#第一章-连续信号的分析" class="headerlink" title="第一章 连续信号的分析"></a>第一章 连续信号的分析</h1><h2 id="第一节连续信号的时域描述和分析"><a href="#第一节连续信号的时域描述和分析" class="headerlink" title="第一节连续信号的时域描述和分析"></a>第一节连续信号的时域描述和分析</h2><h3 id="一、连续信号的时域描述"><a href="#一、连续信号的时域描述" class="headerlink" title="一、连续信号的时域描述"></a>一、连续信号的时域描述</h3><h4 id="一-普通信号的时域描述"><a href="#一-普通信号的时域描述" class="headerlink" title="(一)普通信号的时域描述"></a>(一)普通信号的时域描述</h4><h5 id="1-正弦信号"><a href="#1-正弦信号" class="headerlink" title="1.正弦信号"></a>1.正弦信号</h5><p>$ x(t)&#x3D;A\sin(\omega_0 t+\phi_0)&#x3D;A\cos(\omega_0 t+\phi_0-\frac{\pi}{2})    -\infty&lt;t&lt;\infty$</p>
+<h5 id="2-指数信号"><a href="#2-指数信号" class="headerlink" title="2.指数信号"></a>2.指数信号</h5><p>$x(t)&#x3D;Ae^{st}  -\infty&lt;t&lt;\infty$</p>
+<h4 id="二-奇异信号的描述"><a href="#二-奇异信号的描述" class="headerlink" title="(二)奇异信号的描述"></a>(二)奇异信号的描述</h4><h5 id="1-单位斜坡信号"><a href="#1-单位斜坡信号" class="headerlink" title="1.单位斜坡信号"></a>1.单位斜坡信号</h5><p>$$<br>\begin{cases}<br>\end{cases}<br>$$</p>
+<h5 id="2-单位斜坡信号"><a href="#2-单位斜坡信号" class="headerlink" title="2.单位斜坡信号"></a>2.单位斜坡信号</h5><p>$$<br>\begin{cases}<br>\end{cases}<br>$$<br><img src="/../images/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/1.png" alt="信号图片" title="信号图片"><br>由单位斜坡信号可以得到矩形信号$x(t)&#x3D;A[u(t+\frac{\tau}{2})-u(t-\frac{\tau}{2})]\$<br><img src="/../images/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/2.png" alt="矩形信号" title="矩形信号"></p>
+<h5 id="3-单位冲激信号"><a href="#3-单位冲激信号" class="headerlink" title="3.单位冲激信号"></a>3.单位冲激信号</h5><p>$$<br>\begin{cases}<br>\end{cases}<br>$$</p>
+<p>冲激信号的性质</p>
+<p>$1.若\delta(t)在x&#x3D;0处连续,则有\int_{-\infty}^{\infty}x(t)\delta(t)dt&#x3D;x(0)$</p>
+<p>2.冲激信号具有偶函数特性</p>
+<p>3.冲激信号于阶跃信号互为积分和微分得到关系</p>
+<p>$\int_{-\infty}^t\delta(\tau)d\tau&#x3D;u(t)$</p>
+<p>$\frac{du(t)}{dt}&#x3D;\delta(t)$</p>
+<h3 id="二、连续信号的时域分析"><a href="#二、连续信号的时域分析" class="headerlink" title="二、连续信号的时域分析"></a>二、连续信号的时域分析</h3><h4 id="一-基本运算"><a href="#一-基本运算" class="headerlink" title="(一)基本运算"></a>(一)基本运算</h4><h5 id="1-尺度变换"><a href="#1-尺度变换" class="headerlink" title="1.尺度变换"></a>1.尺度变换</h5><h5 id="2-翻转"><a href="#2-翻转" class="headerlink" title="2.翻转"></a>2.翻转</h5><h5 id="3-平移"><a href="#3-平移" class="headerlink" title="3.平移"></a>3.平移</h5><h4 id="二-叠加和相乘"><a href="#二-叠加和相乘" class="headerlink" title="(二)叠加和相乘"></a>(二)叠加和相乘</h4><h4 id="三-微分和积分"><a href="#三-微分和积分" class="headerlink" title="(三)微分和积分"></a>(三)微分和积分</h4><h4 id="三-卷积运算"><a href="#三-卷积运算" class="headerlink" title="(三)卷积运算"></a>(三)卷积运算</h4><p>$x_1(t)*x_2(t)&#x3D;\int_{-\infty}^{\infty}x_1(\tau)x_2(t-\tau)d\tau&#x3D;\int_{-\infty}^{\infty}x_1(t-\tau)x_2(\tau)d\tau$</p>
+<h3 id="三、连续信号的时域分析"><a href="#三、连续信号的时域分析" class="headerlink" title="三、连续信号的时域分析"></a>三、连续信号的时域分析</h3><h4 id="一-分解成冲激函数之和"><a href="#一-分解成冲激函数之和" class="headerlink" title="(一)分解成冲激函数之和"></a>(一)分解成冲激函数之和</h4><h4 id="二-正交分解"><a href="#二-正交分解" class="headerlink" title="(二)正交分解"></a>(二)正交分解</h4><h5 id="1-正交函数集"><a href="#1-正交函数集" class="headerlink" title="1.正交函数集"></a>1.正交函数集</h5><p>$在(t_1,t_2)区间内定义的两个非零实函数f_1(t)与f_2(t),若满足$<br>$\int_{-\infty}^{\infty}f_1(t)f_2(t)dt&#x3D;0$<br>则称$f_1(t)与f_2(t)在区间(t_1,t_2)内正交$</p>
+<p>任意两个正交函数构成的集合是正交函数集若除正交函数集外不存在非零函数$\phi(t)满足$</p>
+<p>$\int_{t1}^{t2}\phi(t)f_i(t)dt&#x3D;0 ,i&#x3D;1,2……n $<br>则称此函数正交集为完备正交函数集</p>
+<h5 id="2-信号的正交分解"><a href="#2-信号的正交分解" class="headerlink" title="2.信号的正交分解"></a>2.信号的正交分解</h5><h2 id="第二节-连续信号的频域分析"><a href="#第二节-连续信号的频域分析" class="headerlink" title="第二节 连续信号的频域分析"></a>第二节 连续信号的频域分析</h2><h3 id="一、周期信号的频谱分析"><a href="#一、周期信号的频谱分析" class="headerlink" title="一、周期信号的频谱分析"></a>一、周期信号的频谱分析</h3><h4 id="一-周期信号的的傅里叶级数展开式"><a href="#一-周期信号的的傅里叶级数展开式" class="headerlink" title="(一)周期信号的的傅里叶级数展开式"></a>(一)周期信号的的傅里叶级数展开式</h4><p>一个周期为$T_0&#x3D;\frac{2\pi}{\omega_0}$的周期信号，只要满足狄里赫利条件都可以分解成三角函数表达式<br>$x(t)&#x3D;\frac{a_0}{2}+\sum_{n&#x3D;1}^{\infty}(a_n\cos(n\omega_0t+\phi_n)+b_n\sin(n\omega_0t+\phi_n))$</p>
+<p>傅里叶级数的指数形式<br>$x(t)&#x3D;\frac{1}{2}\sum_{n&#x3D;-\infty}^{\infty}A_ne^{j\phi_0}e^{jn\omega_0t}&#x3D;\sum_{n&#x3D;-\infty}^{\infty}X(n\omega_0)e^{jn\omega_0t}$</p>
+<h4 id="二-周期信号的频谱"><a href="#二-周期信号的频谱" class="headerlink" title="(二)周期信号的频谱"></a>(二)周期信号的频谱</h4><p>$X(n\omega_0)也称为周期信号的频谱函数$</p>
+<p>$模|X(n\omega_0)|$</p>
+<h4 id="三-周期信号的功率分配"><a href="#三-周期信号的功率分配" class="headerlink" title="(三)周期信号的功率分配"></a>(三)周期信号的功率分配</h4><h4 id="四-周期信号的傅里叶级数近似"><a href="#四-周期信号的傅里叶级数近似" class="headerlink" title="(四)周期信号的傅里叶级数近似"></a>(四)周期信号的傅里叶级数近似</h4><h3 id="二、非周期信号的频谱分析"><a href="#二、非周期信号的频谱分析" class="headerlink" title="二、非周期信号的频谱分析"></a>二、非周期信号的频谱分析</h3><h4 id="一-从傅里叶级数到傅里叶变换"><a href="#一-从傅里叶级数到傅里叶变换" class="headerlink" title="(一)从傅里叶级数到傅里叶变换"></a>(一)从傅里叶级数到傅里叶变换</h4><p>$1.X(\omega)&#x3D;\int_{-\infty}^{\infty}x(t)e^{-j\omega t}dt$</p>
+<p>$2.x(t)&#x3D;\frac{1}{2\pi}\int_{-\infty}^{\infty}X(\omega)e^{j\omega t}d\omega$</p>
+<p>$其中1式称为傅里叶变换,它将连续时间函数x(t)变换为频率的连续函数X(\omega)$<br>因此,$X(\omega)称为x(t)的傅里叶变换$</p>
+<p>2式也可以写成</p>
+<p>$x(t)&#x3D;\frac{1}{2\pi}\int_{-\infty}^{\infty}|X(\omega)|\cos[\omega t+\phi(\omega)]d\omega+\frac{j}{2\pi}\int_{-\infty}^{\infty}|X(\omega)|\sin[\omega t+\phi(\omega)]d\omega$</p>
+</div>
+        </div>
+        
+            <div class="kratos-copyright text-center clearfix">
+                <span itemprop="copyrightNotice">本作品采用 <a rel="license nofollow" target="_blank" href="https://creativecommons.org/licenses/by-sa/4.0/">知识共享署名-相同方式共享 4.0 国际许可协议</a> 进行许可</span>
+            </div>
+        
+        <footer class="kratos-entry-footer clearfix">
+            
+            
+            
+                <div class="post-actions text-center clearfix" id="post-actions">
+                
+                    <a class="donate" href="javascript:;" onclick="krOpenDonateModal()"><i class="fa fa-bitcoin"></i> 打赏</a>
+                
+                
+                    <a class="share" href="javascript:;" onclick="krOpenShareModal()"><i class="fa fa-share-alt"></i> 分享</a>
+                
+                </div>
+            
+            <div class="footer-tag clearfix">
+                <div class="pull-left">
+                <i class="fa fa-tags"></i>
+                    <a class="tag-none-link" href="/tags/%E6%AC%A2%E8%BF%8E/" rel="tag">欢迎</a>
+                </div>
+                <div class="pull-date">
+                    <time datetime="2024-11-29T05:56:18.887Z" itemprop="dateModified">最后编辑：2024-11-29</time>
+                </div>
+            </div>
+        </footer>
+    </div>
+    
+        <nav class="navigation post-navigation clearfix" role="navigation">
+            
+            <div class="nav-previous clearfix">
+                <a title=" 大物知识总结" href="/posts/大学物理/"><i class="fa fa-angle-left"></i> 上一篇</a>
+            </div>
+            
+            
+        </nav>
+    
+    
+        <div class="comment-post">
+            
+        </div>
+    
+</article>
+
+        
+
+            </section>
+
+            
+                
+
+<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
+    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
+    
+    
+                <aside id="krw-about" class="widget widget-kratos-about clearfix">
+    <div class="photo-background"></div>
+    <div class="photo-wrapper clearfix">
+        <div class="photo-wrapper-tip text-center">
+            <img class="about-photo" src="/images/user.svg" alt="All contributors" loading="lazy" decoding="auto" />
+        </div>
+    </div>
+    <div class="textwidget">
+        <p class="text-center">欢迎使用这个主题，希望能给您带来美好的体验。</p>
+    </div>
+    <div class="site-meta">
+        <a class="meta-item" href="/archives/">
+            <span class="title">
+                文章
+            </span>
+            <span class="count">
+                4
+            </span>
+        </a>
+        <a class="meta-item" href="/categories/">
+            <span class="title">
+                分类
+            </span>
+            <span class="count">
+                2
+            </span>
+        </a>
+        <a class="meta-item" href="/tags/">
+            <span class="title">
+                标签
+            </span>
+            <span class="count">
+                1
+            </span>
+        </a>
+    </div>
+</aside>
+            
+                    <div class="sticky-area">
+                
+                    <aside id="krw-toc" class="widget widget-kratos-toc clearfix toc-div-class" >
+    <div class="photo-background"></div>
+    <h4 class="widget-title no-after">
+        <i class="fa fa-compass"></i>
+        文章目录
+        <span class="toc-progress-bar" role="progressbar" aria-label="阅读进度："></span>
+    </h4>
+    <div class="textwidget">
+        <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E7%AB%A0-%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%88%86%E6%9E%90"><span class="toc-text">第一章 连续信号的分析</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%B8%80%E8%8A%82%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E6%8F%8F%E8%BF%B0%E5%92%8C%E5%88%86%E6%9E%90"><span class="toc-text">第一节连续信号的时域描述和分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E6%8F%8F%E8%BF%B0"><span class="toc-text">一、连续信号的时域描述</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E6%99%AE%E9%80%9A%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E6%8F%8F%E8%BF%B0"><span class="toc-text">(一)普通信号的时域描述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%AD%A3%E5%BC%A6%E4%BF%A1%E5%8F%B7"><span class="toc-text">1.正弦信号</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E6%8C%87%E6%95%B0%E4%BF%A1%E5%8F%B7"><span class="toc-text">2.指数信号</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E5%A5%87%E5%BC%82%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%8F%8F%E8%BF%B0"><span class="toc-text">(二)奇异信号的描述</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%8D%95%E4%BD%8D%E6%96%9C%E5%9D%A1%E4%BF%A1%E5%8F%B7"><span class="toc-text">1.单位斜坡信号</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E5%8D%95%E4%BD%8D%E6%96%9C%E5%9D%A1%E4%BF%A1%E5%8F%B7"><span class="toc-text">2.单位斜坡信号</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%8D%95%E4%BD%8D%E5%86%B2%E6%BF%80%E4%BF%A1%E5%8F%B7"><span class="toc-text">3.单位冲激信号</span></a></li></ol></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90"><span class="toc-text">二、连续信号的时域分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%9F%BA%E6%9C%AC%E8%BF%90%E7%AE%97"><span class="toc-text">(一)基本运算</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E5%B0%BA%E5%BA%A6%E5%8F%98%E6%8D%A2"><span class="toc-text">1.尺度变换</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E7%BF%BB%E8%BD%AC"><span class="toc-text">2.翻转</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#3-%E5%B9%B3%E7%A7%BB"><span class="toc-text">3.平移</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E5%8F%A0%E5%8A%A0%E5%92%8C%E7%9B%B8%E4%B9%98"><span class="toc-text">(二)叠加和相乘</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-%E5%BE%AE%E5%88%86%E5%92%8C%E7%A7%AF%E5%88%86"><span class="toc-text">(三)微分和积分</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-%E5%8D%B7%E7%A7%AF%E8%BF%90%E7%AE%97"><span class="toc-text">(三)卷积运算</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%89%E3%80%81%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%97%B6%E5%9F%9F%E5%88%86%E6%9E%90"><span class="toc-text">三、连续信号的时域分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%88%86%E8%A7%A3%E6%88%90%E5%86%B2%E6%BF%80%E5%87%BD%E6%95%B0%E4%B9%8B%E5%92%8C"><span class="toc-text">(一)分解成冲激函数之和</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E6%AD%A3%E4%BA%A4%E5%88%86%E8%A7%A3"><span class="toc-text">(二)正交分解</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#1-%E6%AD%A3%E4%BA%A4%E5%87%BD%E6%95%B0%E9%9B%86"><span class="toc-text">1.正交函数集</span></a></li><li class="toc-item toc-level-5"><a class="toc-link" href="#2-%E4%BF%A1%E5%8F%B7%E7%9A%84%E6%AD%A3%E4%BA%A4%E5%88%86%E8%A7%A3"><span class="toc-text">2.信号的正交分解</span></a></li></ol></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E7%AC%AC%E4%BA%8C%E8%8A%82-%E8%BF%9E%E7%BB%AD%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E5%9F%9F%E5%88%86%E6%9E%90"><span class="toc-text">第二节 连续信号的频域分析</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%B8%80%E3%80%81%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%E5%88%86%E6%9E%90"><span class="toc-text">一、周期信号的频谱分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%B1%95%E5%BC%80%E5%BC%8F"><span class="toc-text">(一)周期信号的的傅里叶级数展开式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%BA%8C-%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1"><span class="toc-text">(二)周期信号的频谱</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%89-%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%8A%9F%E7%8E%87%E5%88%86%E9%85%8D"><span class="toc-text">(三)周期信号的功率分配</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#%E5%9B%9B-%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E8%BF%91%E4%BC%BC"><span class="toc-text">(四)周期信号的傅里叶级数近似</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E4%BA%8C%E3%80%81%E9%9D%9E%E5%91%A8%E6%9C%9F%E4%BF%A1%E5%8F%B7%E7%9A%84%E9%A2%91%E8%B0%B1%E5%88%86%E6%9E%90"><span class="toc-text">二、非周期信号的频谱分析</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#%E4%B8%80-%E4%BB%8E%E5%82%85%E9%87%8C%E5%8F%B6%E7%BA%A7%E6%95%B0%E5%88%B0%E5%82%85%E9%87%8C%E5%8F%B6%E5%8F%98%E6%8D%A2"><span class="toc-text">(一)从傅里叶级数到傅里叶变换</span></a></li></ol></li></ol></li></ol></li></ol>
+    </div>
+</aside>
+                
+                
+  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
+    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
+      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%A8%E6%96%B0%E4%BD%93%E9%AA%8C/">全新体验</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/">学习资料</a><span class="category-list-count">3</span></li></ul>
+  </aside>
+
+
+            
+                
+  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
+    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
+      <div class="tag-clouds">
+        <a href="/tags/%E6%AC%A2%E8%BF%8E/" style="font-size: 0.6em;">欢迎</a>
+      </div>
+  </aside>
+
+            
+                
+  <aside id="krw-posts" class="widget widget-kratos-posts">
+  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
+  <div class="tab-content">
+      <ul class="list-group">
+        
+        
+          
+          
+            <a class="list-group-item" href="/posts/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/"><i class="fa fa-book"></i> 信号分析处理与分析</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/"><i class="fa fa-book"></i> 大物知识总结</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/posts/%E6%A6%82%E7%8E%87%E8%AE%BA/"><i class="fa fa-book"></i> 概率论知识总结</a>
+            
+          
+        
+          
+          
+            <a class="list-group-item" href="/posts/hello-world/"><i class="fa fa-book"></i> 你好，世界！</a>
+            
+          
+        
+      </ul>
+  </div>
+  </aside>
+
+            
+    </div>
+</section>
+            
+
+        
+
+                </div>
+    </div>
+</div>
+
+<footer>
+    <div id="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 col-md-offset-3 footer-list text-center">
+                    <ul class="kratos-social-icons">
+                        
+                            <li>
+                                <a href="https://github.com/kratos-rebirth" target="_blank" rel="nofollow">
+                                    <i class="fa fa-github"></i>
+                                </a>
+                            </li>
+                        
+                            <li>
+                                <a href="/atom.xml" target="_blank" rel="nofollow">
+                                    <i class="fa fa-rss"></i>
+                                </a>
+                            </li>
+                        
+                    </ul>
+                    <ul class="kratos-copyright">
+                        <div>
+                            <li>&copy; 2024 Kratos : Rebirth 版权所有.</li>
+                            <li>本站已在风雨中飘摇<span id="kr-since">Loading...</span></li>
+                        </div>
+                        <div>
+                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
+                            <li>站点由 <a href="https://github.com/Candinya/Kratos-Rebirth/graphs/contributors" target="_blank">All contributors</a> 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
+                        </div>
+                        <!-- 额外的追加注入项 -->
+                        
+                            <div>
+                                
+                                    <li>由 <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a> 强力驱动</li>
+                                
+                                    <li>在 <a href="https://github.io" target="_blank">Github Pages</a> 暖心托管</li>
+                                
+                            </div>
+                        
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="kr-tool text-center">
+            <div class="tool">
+                
+                    <div class="box search-box">
+                        <a href="/search">
+                            <span class="fa fa-search"></span>
+                        </a>
+                    </div>
+                
+                <div class="box theme-box" id="theme-toggle">
+                    <span class="fa fa-adjust"></span>
+                </div>
+            </div>
+            <div id="gotop-box" class="box gotop-box">
+                <span class="fa fa-chevron-up"></span>
+            </div>
+        </div>
+    </div>
+</footer>
+</div>
+</div>
+
+
+    <div id="kr-donate-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-bitcoin"></i>
+            </div>
+            <div class="kr-modal-title">赞助喵</div>
+            <button class="kr-modal-close" onclick="krCloseDonateModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-donate-message">非常感谢您的喜欢！ <i class="fa fa-heart" style="color:#d43f57"></i></div>
+            <div class="kr-donate-qr" id="kr-donate-qr">
+                
+                    <img class="kr-donate-placeholder" src="https://dev.krt.moe/demo-assets/donate.webp" alt="赞助喵" />
+                
+            </div>
+            <div class="kr-donate-platforms">
+                
+                    
+                        <button class="kr-donate-platform-button" style="color: skyblue;" title="模拟支付" onclick="krDonateModalShowPlatformQR('example_payment', 'skyblue')">
+                            <i class="fa fa-credit-card"></i>
+                        </button>
+                    
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/donate.min.js"></script>
+
+
+
+
+    <div id="kr-share-modal" class="kr-modal">
+    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
+    <div class="kr-modal-content">
+        <div class="kr-modal-header">
+            <div class="kr-modal-icon">
+                <i class="fa fa-share-alt"></i>
+            </div>
+            <div class="kr-modal-title">分享这一刻</div>
+            <button class="kr-modal-close" onclick="krCloseShareModal()">
+                <i class="fa fa-times-circle"></i>
+            </button>
+        </div>
+        <div class="kr-modal-body">
+            <div class="kr-share-message">让朋友们也来瞅瞅！</div>
+            <div class="kr-share-qr" id="kr-share-qr"></div>
+            <div class="kr-share-platforms">
+                
+                    <button class="kr-share-platform-button" style="color: #62b6e7;" title="喵窝" onclick="krShareModalOpenPlatform('https://nya.one/share?text=%3E%20$TITLE%0A%3E%0A%3E%20$SUMMARY%0A----%20$SITE%0A%0A$URL')">
+                        <svg fill="currentColor" width="18" height="18" viewBox="0 0 329 388"><path d="M0,36.226c0,-19.993 16.233,-36.226 36.226,-36.226c13.788,0 25.787,7.719 31.908,19.068l188.366,229.845l0,-111.259c-6.356,5.508 -14.645,8.843 -23.707,8.843c-19.994,0 -36.226,-16.232 -36.226,-36.226c-0,-8.551 2.968,-16.413 7.93,-22.613l-0.015,-0.013l56.614,-69.08c6.2,-11.073 18.047,-18.565 31.63,-18.565c19.994,0 36.227,16.233 36.227,36.226l-0,314.644c-0,19.994 -16.233,36.226 -36.227,36.226c-13.166,0 -24.701,-7.039 -31.044,-17.555l-189.229,-230.899l-0,212.228c-0,19.994 -16.233,36.226 -36.227,36.226c-19.993,0 -36.226,-16.232 -36.226,-36.226l0,-314.644Z" /></svg>
+                    </button>
+                
+            </div>
+        </div>
+    </div>
+</div>
+<script defer src="/js/kr-modal/share.min.js"></script>
+
+
+
+<!-- 额外的追加注入项 -->
+
+
+        <script>
+    if (!window.kr) {
+        window.kr = {};
+    }
+    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
+    window.kr.siteRoot = "/";
+</script>
+
+
+  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+
+
+
+  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+
+
+<script defer src="/js/kr-core.min.js"></script>
+
+
+  <script defer src="/js/kr-pjax.min.js"></script>
+
+
+<!-- 额外的追加注入项 -->
+
+
+    </body>
+</html>

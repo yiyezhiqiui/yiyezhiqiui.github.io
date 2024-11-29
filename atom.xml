@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kratos : Rebirth</title>
+  
+  <subtitle>一个可爱而现代的 Hexo 主题</subtitle>
+  <link href="http://yiyezhiqiui.github.io/atom.xml" rel="self"/>
+  
+  <link href="http://yiyezhiqiui.github.io/"/>
+  <updated>2024-11-29T05:56:18.887Z</updated>
+  <id>http://yiyezhiqiui.github.io/</id>
+  
+  <author>
+    <name>All contributors</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>信号分析处理与分析</title>
+    <link href="http://yiyezhiqiui.github.io/posts/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/"/>
+    <id>http://yiyezhiqiui.github.io/posts/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/</id>
+    <published>2024-11-21T16:00:00.000Z</published>
+    <updated>2024-11-29T05:56:18.887Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="第一章-连续信号的分析"><a href="#第一章-连续信号的分析" class="headerlink" title="第一章 连续信号的分析"></a>第一章 连续信号的分析</h1><h2 id="第一节连续信号的时域描述和分析"><a href="#第一节连续信号的时域描述和分析" class="headerlink" title="第一节连续信号的时域描述和分析"></a>第一节连续信号的时域描述和分析</h2><h3 id="一、连续信号的时域描述"><a href="#一、连续信号的时域描述" class="headerlink" title="一、连续信号的时域描述"></a>一、连续信号的时域描述</h3><h4 id="一-普通信号的时域描述"><a href="#一-普通信号的时域描述" class="headerlink" title="(一)普通信号的时域描述"></a>(一)普通信号的时域描述</h4><h5 id="1-正弦信号"><a href="#1-正弦信号" class="headerlink" title="1.正弦信号"></a>1.正弦信号</h5><p>$ x(t)&#x3D;A\sin(\omega_0 t+\phi_0)&#x3D;A\cos(\omega_0 t+\phi_0-\frac{\pi}{2})    -\infty&lt;t&lt;\infty$</p><h5 id="2-指数信号"><a href="#2-指数信号" class="headerlink" title="2.指数信号"></a>2.指数信号</h5><p>$x(t)&#x3D;Ae^{st}  -\infty&lt;t&lt;\infty$</p><h4 id="二-奇异信号的描述"><a href="#二-奇异信号的描述" class="headerlink" title="(二)奇异信号的描述"></a>(二)奇异信号的描述</h4><h5 id="1-单位斜坡信号"><a href="#1-单位斜坡信号" class="headerlink" title="1.单位斜坡信号"></a>1.单位斜坡信号</h5><p>$$<br>\begin{cases}<br>\end{cases}<br>$$</p><h5 id="2-单位斜坡信号"><a href="#2-单位斜坡信号" class="headerlink" title="2.单位斜坡信号"></a>2.单位斜坡信号</h5><p>$$<br>\begin{cases}<br>\end{cases}<br>$$<br><img src="/../images/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/1.png" alt="信号图片" title="信号图片"><br>由单位斜坡信号可以得到矩形信号$x(t)&#x3D;A[u(t+\frac{\tau}{2})-u(t-\frac{\tau}{2})]\$<br><img src="/../images/%E4%BF%A1%E5%8F%B7%E5%88%86%E6%9E%90%E4%B8%8E%E5%A4%84%E7%90%86/2.png" alt="矩形信号" title="矩形信号"></p><h5 id="3-单位冲激信号"><a href="#3-单位冲激信号" class="headerlink" title="3.单位冲激信号"></a>3.单位冲激信号</h5><p>$$<br>\begin{cases}<br>\end{cases}<br>$$</p><p>冲激信号的性质</p><p>$1.若\delta(t)在x&#x3D;0处连续,则有\int_{-\infty}^{\infty}x(t)\delta(t)dt&#x3D;x(0)$</p><p>2.冲激信号具有偶函数特性</p><p>3.冲激信号于阶跃信号互为积分和微分得到关系</p><p>$\int_{-\infty}^t\delta(\tau)d\tau&#x3D;u(t)$</p><p>$\frac{du(t)}{dt}&#x3D;\delta(t)$</p><h3 id="二、连续信号的时域分析"><a href="#二、连续信号的时域分析" class="headerlink" title="二、连续信号的时域分析"></a>二、连续信号的时域分析</h3><h4 id="一-基本运算"><a href="#一-基本运算" class="headerlink" title="(一)基本运算"></a>(一)基本运算</h4><h5 id="1-尺度变换"><a href="#1-尺度变换" class="headerlink" title="1.尺度变换"></a>1.尺度变换</h5><h5 id="2-翻转"><a href="#2-翻转" class="headerlink" title="2.翻转"></a>2.翻转</h5><h5 id="3-平移"><a href="#3-平移" class="headerlink" title="3.平移"></a>3.平移</h5><h4 id="二-叠加和相乘"><a href="#二-叠加和相乘" class="headerlink" title="(二)叠加和相乘"></a>(二)叠加和相乘</h4><h4 id="三-微分和积分"><a href="#三-微分和积分" class="headerlink" title="(三)微分和积分"></a>(三)微分和积分</h4><h4 id="三-卷积运算"><a href="#三-卷积运算" class="headerlink" title="(三)卷积运算"></a>(三)卷积运算</h4><p>$x_1(t)*x_2(t)&#x3D;\int_{-\infty}^{\infty}x_1(\tau)x_2(t-\tau)d\tau&#x3D;\int_{-\infty}^{\infty}x_1(t-\tau)x_2(\tau)d\tau$</p><h3 id="三、连续信号的时域分析"><a href="#三、连续信号的时域分析" class="headerlink" title="三、连续信号的时域分析"></a>三、连续信号的时域分析</h3><h4 id="一-分解成冲激函数之和"><a href="#一-分解成冲激函数之和" class="headerlink" title="(一)分解成冲激函数之和"></a>(一)分解成冲激函数之和</h4><h4 id="二-正交分解"><a href="#二-正交分解" class="headerlink" title="(二)正交分解"></a>(二)正交分解</h4><h5 id="1-正交函数集"><a href="#1-正交函数集" class="headerlink" title="1.正交函数集"></a>1.正交函数集</h5><p>$在(t_1,t_2)区间内定义的两个非零实函数f_1(t)与f_2(t),若满足$<br>$\int_{-\infty}^{\infty}f_1(t)f_2(t)dt&#x3D;0$<br>则称$f_1(t)与f_2(t)在区间(t_1,t_2)内正交$</p><p>任意两个正交函数构成的集合是正交函数集若除正交函数集外不存在非零函数$\phi(t)满足$</p><p>$\int_{t1}^{t2}\phi(t)f_i(t)dt&#x3D;0 ,i&#x3D;1,2……n $<br>则称此函数正交集为完备正交函数集</p><h5 id="2-信号的正交分解"><a href="#2-信号的正交分解" class="headerlink" title="2.信号的正交分解"></a>2.信号的正交分解</h5><h2 id="第二节-连续信号的频域分析"><a href="#第二节-连续信号的频域分析" class="headerlink" title="第二节 连续信号的频域分析"></a>第二节 连续信号的频域分析</h2><h3 id="一、周期信号的频谱分析"><a href="#一、周期信号的频谱分析" class="headerlink" title="一、周期信号的频谱分析"></a>一、周期信号的频谱分析</h3><h4 id="一-周期信号的的傅里叶级数展开式"><a href="#一-周期信号的的傅里叶级数展开式" class="headerlink" title="(一)周期信号的的傅里叶级数展开式"></a>(一)周期信号的的傅里叶级数展开式</h4><p>一个周期为$T_0&#x3D;\frac{2\pi}{\omega_0}$的周期信号，只要满足狄里赫利条件都可以分解成三角函数表达式<br>$x(t)&#x3D;\frac{a_0}{2}+\sum_{n&#x3D;1}^{\infty}(a_n\cos(n\omega_0t+\phi_n)+b_n\sin(n\omega_0t+\phi_n))$</p><p>傅里叶级数的指数形式<br>$x(t)&#x3D;\frac{1}{2}\sum_{n&#x3D;-\infty}^{\infty}A_ne^{j\phi_0}e^{jn\omega_0t}&#x3D;\sum_{n&#x3D;-\infty}^{\infty}X(n\omega_0)e^{jn\omega_0t}$</p><h4 id="二-周期信号的频谱"><a href="#二-周期信号的频谱" class="headerlink" title="(二)周期信号的频谱"></a>(二)周期信号的频谱</h4><p>$X(n\omega_0)也称为周期信号的频谱函数$</p><p>$模|X(n\omega_0)|$</p><h4 id="三-周期信号的功率分配"><a href="#三-周期信号的功率分配" class="headerlink" title="(三)周期信号的功率分配"></a>(三)周期信号的功率分配</h4><h4 id="四-周期信号的傅里叶级数近似"><a href="#四-周期信号的傅里叶级数近似" class="headerlink" title="(四)周期信号的傅里叶级数近似"></a>(四)周期信号的傅里叶级数近似</h4><h3 id="二、非周期信号的频谱分析"><a href="#二、非周期信号的频谱分析" class="headerlink" title="二、非周期信号的频谱分析"></a>二、非周期信号的频谱分析</h3><h4 id="一-从傅里叶级数到傅里叶变换"><a href="#一-从傅里叶级数到傅里叶变换" class="headerlink" title="(一)从傅里叶级数到傅里叶变换"></a>(一)从傅里叶级数到傅里叶变换</h4><p>$1.X(\omega)&#x3D;\int_{-\infty}^{\infty}x(t)e^{-j\omega t}dt$</p><p>$2.x(t)&#x3D;\frac{1}{2\pi}\int_{-\infty}^{\infty}X(\omega)e^{j\omega t}d\omega$</p><p>$其中1式称为傅里叶变换,它将连续时间函数x(t)变换为频率的连续函数X(\omega)$<br>因此,$X(\omega)称为x(t)的傅里叶变换$</p><p>2式也可以写成</p><p>$x(t)&#x3D;\frac{1}{2\pi}\int_{-\infty}^{\infty}|X(\omega)|\cos[\omega t+\phi(\omega)]d\omega+\frac{j}{2\pi}\int_{-\infty}^{\infty}|X(\omega)|\sin[\omega t+\phi(\omega)]d\omega$</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;第一章-连续信号的分析&quot;&gt;&lt;a href=&quot;#第一章-连续信号的分析&quot; class=&quot;headerlink&quot; title=&quot;第一章 连续信号的分析&quot;&gt;&lt;/a&gt;第一章 连续信号的分析&lt;/h1&gt;&lt;h2 id=&quot;第一节连续信号的时域描述和分析&quot;&gt;&lt;a href=&quot;#第一</summary>
+      
+    
+    
+    
+    <category term="学习资料" scheme="http://yiyezhiqiui.github.io/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/"/>
+    
+    
+    <category term="欢迎" scheme="http://yiyezhiqiui.github.io/tags/%E6%AC%A2%E8%BF%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>大物知识总结</title>
+    <link href="http://yiyezhiqiui.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/"/>
+    <id>http://yiyezhiqiui.github.io/posts/%E5%A4%A7%E5%AD%A6%E7%89%A9%E7%90%86/</id>
+    <published>2024-11-21T16:00:00.000Z</published>
+    <updated>2024-11-29T05:45:32.890Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="振动"><a href="#振动" class="headerlink" title="振动"></a>振动</h1><h2 id="简谐运动的描述"><a href="#简谐运动的描述" class="headerlink" title="简谐运动的描述"></a>简谐运动的描述</h2><h3 id="简谐振动的数学表达式为"><a href="#简谐振动的数学表达式为" class="headerlink" title="简谐振动的数学表达式为"></a>简谐振动的数学表达式为</h3><p>$$x&#x3D;A\cos(\omega t+\phi)\<br>A&#x3D;\sqrt{x_0^2+(\frac{v_0}{\omega})^2} \<br>\phi&#x3D;\arccos(\frac{v_0}{A})<br>$$</p><h3 id="对于弹簧振子"><a href="#对于弹簧振子" class="headerlink" title="对于弹簧振子"></a>对于弹簧振子</h3><p>$\omega&#x3D;\sqrt{\frac{k}{m}}$</p><p>T&#x3D;$2\pi\sqrt{\frac{m}{k}}$</p><h3 id="简谐振动的速度方程为"><a href="#简谐振动的速度方程为" class="headerlink" title="简谐振动的速度方程为"></a>简谐振动的速度方程为</h3><p>v&#x3D;$-A\omega\sin(\omega t+\phi)$</p><h3 id="简谐振动的能量"><a href="#简谐振动的能量" class="headerlink" title="简谐振动的能量"></a>简谐振动的能量</h3><p>$E_k&#x3D;\frac{1}{2}mA^2\omega^2\sin^2(\omega t+\phi)$</p><p>$E_p&#x3D;\frac{1}{2}kA^2\cos^2(\omega t+\phi)$</p><p>一个周期内的平均势能和动能均为$\frac{1}{4}kA^2$</p><p>总机械能为$\frac{1}{2}kA^2$</p><h2 id="简谐运动的合成"><a href="#简谐运动的合成" class="headerlink" title="简谐运动的合成"></a>简谐运动的合成</h2><h3 id="两个同方向、同频率的简谐运动的合成"><a href="#两个同方向、同频率的简谐运动的合成" class="headerlink" title="两个同方向、同频率的简谐运动的合成"></a>两个同方向、同频率的简谐运动的合成</h3><p>$x_1&#x3D;A_1\cos(\omega t+ \phi_{10})$</p><p>$x_2&#x3D;A_2\cos(\omega t+ \phi_{20})$</p><p>$x_&#x3D;A\cos(\omega t+ \phi_0)$</p><p>$$<br>\begin{cases}<br>A&#x3D;\sqrt{A_1^2+A_2^2+2A_1A_2\cos(\phi_{10}-\phi_{20})}\<br>\phi_0&#x3D;\arctan(\frac{A_1\sin\phi_{10}+A_2\sin\phi_{20}}{A_1\cos\phi_{10}+A_2\cos\phi_{20}})<br>\end{cases}<br>$$</p><h3 id="两个同方向、不同频率的简谐运动的合成"><a href="#两个同方向、不同频率的简谐运动的合成" class="headerlink" title="两个同方向、不同频率的简谐运动的合成"></a>两个同方向、不同频率的简谐运动的合成</h3><p>$x_1&#x3D;A_1\cos(\omega_1 t+ \phi_{10})$</p><p>$x_2&#x3D;A_2\cos(\omega_2 t+ \phi_{20})$</p><p>$x&#x3D;2A\cos(\frac{\omega_1-\omega_2}{2}+\frac{\phi_{10}-\phi_{20}}{2})\cos(\frac{\omega_1+\omega_2}{2}+\frac{\phi_{10}+\phi_{20}}{2})$</p><h3 id="两个方向垂直、频率相同的简谐振动的合成"><a href="#两个方向垂直、频率相同的简谐振动的合成" class="headerlink" title="两个方向垂直、频率相同的简谐振动的合成"></a>两个方向垂直、频率相同的简谐振动的合成</h3><p>$x_1&#x3D;A_1\cos(\omega t+ \phi_{10})$</p><p>$x_2&#x3D;A_2\cos(\omega t+ \phi_{20})$</p><p>将两式联立得到</p><p>$\frac{x^2}{A_1^2}+\frac{y^2}{A_2^2}-\frac{2xy}{A_1A_2}\cos(\phi_{20}-\phi_{10})&#x3D;\sin^2(\phi_{20}-\phi_{10})$</p><p>(1)当相位差$\phi_{20}-\phi_{10}&#x3D;0$时，可得</p><p>$\frac{x}{A_1}&#x3D;\frac{y}{A_2}$</p><p>(2)当相位差$\phi_{20}-\phi_{10}&#x3D;\pm\pi$时，可得</p><p>$\frac{x}{A_1}&#x3D;-\frac{y}{A_2}$</p><p>(3)当相位差$\phi_{20}-\phi_{10}&#x3D;\pm\frac{\pi}{2}$时，可得</p><p>$\frac{x^2}{A_1^2}+\frac{y^2}{A_2^2}&#x3D;1$</p><h1 id="机械波"><a href="#机械波" class="headerlink" title="机械波"></a>机械波</h1><h2 id="波的基本概念"><a href="#波的基本概念" class="headerlink" title="波的基本概念"></a>波的基本概念</h2><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">横波:质点的振动方向和波动的传播方向垂直</span><br><span class="line">纵波:质点的振动方向和波动的传播方向平行</span><br></pre></td></tr></table></figure><p>频率有振源决定，波速取决于介质，波长则由介质和振源共同决定</p><h2 id="平面简谐波"><a href="#平面简谐波" class="headerlink" title="平面简谐波"></a>平面简谐波</h2><p>$u&#x3D;\upsilon\lambda$</p><p>平面简谐波的函数为</p><p>$y(x,t)&#x3D;A\cos[\omega(t\pm\frac{x}{u})+\phi]$</p><p>+号表示延x轴负方向传播，-表示延x轴正方向传播</p><p>$y(x,t)&#x3D;A\cos[2\pi(\upsilon t-\frac{x}{\lambda})+\phi]$</p><p>$y(x,t)&#x3D;A\cos[2\pi(\frac{t}{T}-\frac{x}{\lambda})+\phi]$</p><p>质点的势能和动能的表达式一样，均为</p><p>$\Delta E_k&#x3D;\frac{1}{2}\rho\Delta V\omega^2A^2sin^2[\omega(t-\frac{x}{u}+\phi)]$</p><p>波的强度</p><p>$I&#x3D;\frac{1}{2}\rho\omega^2A^2u$</p><p>平面波在无吸收的均匀介质中传播，通过每一波面的平均能流相等，波的强度相等，因而每个波面的振幅相等即</p><p>$I_1S_1&#x3D;I_2S_2$<br>由此得$\frac{A_1}{A_2}&#x3D;\frac{r_2}{r_1}$</p><h2 id="声波"><a href="#声波" class="headerlink" title="声波"></a>声波</h2><h3 id="波源静止"><a href="#波源静止" class="headerlink" title="波源静止"></a>波源静止</h3><p>观察者以速度$v_s$相对于介质运动，接收到的频率为$\upsilon_R&#x3D;\frac{u+v_R}{u}\upsilon_s$</p><p>当观察者远离时，接收到的频率为$\upsilon_R&#x3D;\frac{u-v_R}{u}\upsilon_s$</p><h3 id="观察者静止"><a href="#观察者静止" class="headerlink" title="观察者静止"></a>观察者静止</h3><p>波源以速度v_s向观察者运动，接受到的频率为$\upsilon_R&#x3D;\frac{u}{u-v_s}\upsilon_S$</p><p>当波源远离时，接受到的频率为$\upsilon_R&#x3D;\frac{u}{u+v_s}\upsilon_S$</p><h3 id="波源和观察者在同一直线上运动"><a href="#波源和观察者在同一直线上运动" class="headerlink" title="波源和观察者在同一直线上运动"></a>波源和观察者在同一直线上运动</h3><p>相向而行$v_R&#x3D;\frac{u+v_R}{u-v_s}\upsilon_s$</p><p>彼此分开$v_R&#x3D;\frac{u-v_R}{u+v_s}\upsilon_s$</p><h2 id="波的衍射和干涉"><a href="#波的衍射和干涉" class="headerlink" title="波的衍射和干涉"></a>波的衍射和干涉</h2><p>$\Delta\phi&#x3D;\pm2k\pi$时，干涉加强</p><p>$\Delta\phi&#x3D;\pm(2k+1)\pi$时，干涉减弱</p><h2 id="驻波"><a href="#驻波" class="headerlink" title="驻波"></a>驻波</h2><p>$y_1&#x3D;A\cos(2\pi\upsilon t+\phi_1-2\pi\frac{x}{\lambda})$</p><p>$y_2&#x3D;A\cos(2\pi\upsilon t+\phi_2+2\pi\frac{x}{\lambda})$</p><p>$y&#x3D;2A\cos(2\pi\frac{x}{\lambda}+\frac{\phi_2+\phi_1}{2})\cos(2\pi\upsilon t+\frac{\phi_2-\phi_1}{2})$</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">半波损失：波从波疏介质传播到波密介质界面上反射时有半波损失</span><br></pre></td></tr></table></figure><h1 id="光的干涉"><a href="#光的干涉" class="headerlink" title="光的干涉"></a>光的干涉</h1><h2 id="光波的叠加"><a href="#光波的叠加" class="headerlink" title="光波的叠加"></a>光波的叠加</h2><p>两列光满足频率相同、振动方向平行、相位差恒定条件时，光波叠加区域会产生干涉现象。普通的两个光源不产生干涉现象，如两盏电灯间不发生干涉现象</p><h2 id="光程"><a href="#光程" class="headerlink" title="光程"></a>光程</h2><p>光程：在相同时间内，光在介质n中传播距离r引起的相位变化，计算方法为nr<br>相位差与光程差的关系为$\Delta\phi&#x3D;\frac{2\pi}{\lambda}\delta$</p><h2 id="杨氏双缝干涉"><a href="#杨氏双缝干涉" class="headerlink" title="杨氏双缝干涉"></a>杨氏双缝干涉</h2><p>$\frac{\delta}{d}&#x3D;\frac{x}{D}$</p><p>$\delta$为光程差，d为双缝间的距离，x为干涉条纹到双缝垂直平分线的距离，D为双缝到光屏的距离</p><p>干涉相长满足:</p><p>$$<br>\begin{cases}<br>\Delta\phi&#x3D;\pm 2k\pi\<br>\delta&#x3D;\pm k\lambda<br>\end{cases}<br>$$</p><p>干涉相消满足:</p><p>$$<br>\begin{cases}<br>\Delta\phi&#x3D;\pm (2k-1)\pi\<br>\delta&#x3D;\pm (2k-1)k\frac{\lambda}{2}<br>\end{cases}<br>$$</p><p>$x_明&#x3D;\pm k\lambda\frac{D}{d}$</p><p>$x_暗&#x3D;\pm (2k-1)\frac{\lambda}{2}\frac{D}{d}$</p><p>相邻两明纹中心或暗纹中心的间距为$\Delta x&#x3D;\frac{D}{d}\lambda$</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">(1)单色光入射时，出现以屏中央零级明条纹中心为对称的等宽、</span><br><span class="line">等间距的明暗相间的干涉条纹。</span><br><span class="line">(2)若以白光入射，即混合光源，则各个波长的零级明条纹中心在同一处，混合后仍为白光(δ=0)。这就是说，非零级明条纹会呈现彩色条纹，在高级次明条纹中还会出现不同色条的重叠现象。波长越短越靠近零级中心，高级次彩色条纹会出现不同波长干涉条纹的重叠现象，也称作干涉光谱</span><br><span class="line">(3)狭缝S的上下移动，会引起干涉条纹向相反方向移动。用透明介质薄膜遮去双缝中的一条缝，也会引起干涉条纹的变动。</span><br><span class="line">(4)两缝间距d越小，入射波长λ越大，缝到屏间距离越大，干涉条纹分的越开，干涉现象月明显。</span><br></pre></td></tr></table></figure><h3 id="薄膜干涉"><a href="#薄膜干涉" class="headerlink" title="薄膜干涉"></a>薄膜干涉</h3><p>$当n_1&gt;n_2&lt;n_3或者n_1<n_2>n_3时$</p><p>光程差为$\delta&#x3D;2n_2h\cos i+\frac{\lambda}{2}$</p><h4 id="劈尖干涉"><a href="#劈尖干涉" class="headerlink" title="劈尖干涉"></a>劈尖干涉</h4><p>$\delta&#x3D;2n_2h\cos i+\frac{\lambda}{2}$&#x3D;$\begin{cases}<br>k\lambda,明纹中心\<br>(2k-1)\frac{\lambda}{2}，暗纹中心<br>\end{cases}$</p><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">(1)相邻明条纹或暗条纹对应的薄膜厚度Δh=λ/2n</span><br><span class="line">(2)明条纹或暗条纹的宽度a=λ/2nsini</span><br><span class="line">(3)i增大，条纹间距减小(变密)；i减小，条纹间距增大(变疏)</span><br><span class="line">(4)若i不变，两表面远离，条纹向内平移；两表面靠近，条纹向外平移</span><br></pre></td></tr></table></figure><h4 id="牛顿环"><a href="#牛顿环" class="headerlink" title="牛顿环"></a>牛顿环</h4><p>h为0，光程差为λ&#x2F;2，是零级暗条纹中心。越往外，干涉条纹分布越密</p><p>$\delta&#x3D;2nh+\frac{\lambda}{2}$</p><p>$h&#x3D;\frac{r^2}{2R}$​</p><p>可得<br>$n\frac{r^2}{R}+\frac{\lambda}{2}&#x3D;\begin{cases}<br>    2k\frac{\lambda}{2},明纹中心\<br>    (2k+1)\frac{\lambda}{2},暗纹中心<br>\end{cases}$</p><p>明环的半径为$r&#x3D;\sqrt{(2k-1)\frac{R\lambda}{2n}}$</p><p>暗环的半径为$r&#x3D;\sqrt{k\frac{R\lambda}{n}}$</p><p>圆环间距为$a&#x3D;\frac{\lambda}{2sini}$</p><h3 id="迈克耳孙干涉仪"><a href="#迈克耳孙干涉仪" class="headerlink" title="迈克耳孙干涉仪"></a>迈克耳孙干涉仪</h3><p>(1)斜入射的光线，其光程差会随着倾角的增大而减小，因此条纹越往外级数越低，中央是最高级，与牛顿环相反</p><p>(2)中央干涉条纹，光程差为$\delta&#x3D;2h&#x3D;k\lambda$</p><p>(3)中央场冒出或消失N个条纹和h的变化关系：$2\Delta h&#x3D;N\lambda$</p><p>(4)中心条纹数目的变化多少反映了光程差的变化大小</p><h2 id="光的衍射"><a href="#光的衍射" class="headerlink" title="光的衍射"></a>光的衍射</h2><h3 id="惠更斯-菲涅耳原理"><a href="#惠更斯-菲涅耳原理" class="headerlink" title="惠更斯-菲涅耳原理"></a>惠更斯-菲涅耳原理</h3><p>菲涅耳接受了惠更斯的次波概念，并根据波的叠加和干涉原理。提出了”次波相干叠加”概念。此原理课表述为:从同一波面上各点发出的次波(子波)是相干波，经过传播，在空间某点相遇时的叠加是相干叠加。</p><h3 id="单缝的夫琅禾费衍射"><a href="#单缝的夫琅禾费衍射" class="headerlink" title="单缝的夫琅禾费衍射"></a>单缝的夫琅禾费衍射</h3><p>若$\delta&#x3D;asin\phi&#x3D;k\frac{\lambda}{2}$这相当于把BC分成$\frac{\lambda}{2}$宽度的k等分。相邻波带的中心及各对应点发出的光到P点的光程差均为$\frac{\lambda}{2}$,因此这些波带称为半波带</p><p>中央明纹的角宽度$\Delta\phi_0&#x3D;2\frac{\lambda}{a}$</p><p>线宽度为$\Delta x_0&#x3D;2f\frac{\lambda}{a}$</p><p>其他明纹的角宽度$\Delta\phi_0&#x3D;\frac{\lambda}{a}$</p><p>线宽度为$\Delta x_0&#x3D;f\frac{\lambda}{a}$</p><p>单缝宽度a越小，入射光波波长$\lambda$越大，明纹的角宽度和线宽度越大，衍射越明显</p><p>透镜的位置不变而使单缝的位置上下微笑移动，衍射图样的位置不变</p><p>复色光入射，中央0级明条纹中心仍为复色光的混合，其他级明条纹呈现彩色。$\lambda$越小的色条越靠近中心位置。高级次彩色条纹将出现重叠。</p><h3 id="光学仪器的分辨本领"><a href="#光学仪器的分辨本领" class="headerlink" title="光学仪器的分辨本领"></a>光学仪器的分辨本领</h3><p>衍射形成的额中央是明亮园斑，称为艾里斑，占入射光强的84%，半角宽度$\theta_0&#x3D;1.22\frac{\lambda}{D}$</p><p>光学系统的最小分辨角为$\delta\theta&#x3D;1.22\frac{\lambda}{D}$,分辨率为R&#x3D;$\frac{D}{1.22\lambda}$</p><h3 id="衍射光栅"><a href="#衍射光栅" class="headerlink" title="衍射光栅"></a>衍射光栅</h3><p>光栅常数d&#x3D;a+b，a为狭缝，b为不透光的部分</p><p>满足$d\sin\phi&#x3D;\pm k\lambda$,k为明条纹级数</p><p>缺级条纹的$k_1和明条纹二点k的关系为k_0&#x3D;\frac{a+b}{a}k$</p><p>在光栅衍射中，相邻两主极大之间还有一些暗条纹。这些暗条纹满足$(a+b)sin\phi&#x3D;(k+\frac{n}{N})\lambda$,k为主极大级数，N为光栅缝总数，n为正整数，取值为n&#x3D;1，2，3……n-1</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;振动&quot;&gt;&lt;a href=&quot;#振动&quot; class=&quot;headerlink&quot; title=&quot;振动&quot;&gt;&lt;/a&gt;振动&lt;/h1&gt;&lt;h2 id=&quot;简谐运动的描述&quot;&gt;&lt;a href=&quot;#简谐运动的描述&quot; class=&quot;headerlink&quot; title=&quot;简谐运动的描述&quot;&gt;&lt;/</summary>
+      
+    
+    
+    
+    <category term="学习资料" scheme="http://yiyezhiqiui.github.io/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/"/>
+    
+    
+    <category term="欢迎" scheme="http://yiyezhiqiui.github.io/tags/%E6%AC%A2%E8%BF%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>概率论知识总结</title>
+    <link href="http://yiyezhiqiui.github.io/posts/%E6%A6%82%E7%8E%87%E8%AE%BA/"/>
+    <id>http://yiyezhiqiui.github.io/posts/%E6%A6%82%E7%8E%87%E8%AE%BA/</id>
+    <published>2024-11-21T16:00:00.000Z</published>
+    <updated>2024-11-29T05:45:32.894Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="概率论的基本概念"><a href="#概率论的基本概念" class="headerlink" title="概率论的基本概念"></a>概率论的基本概念</h1><h2 id="样本空间、随机事件"><a href="#样本空间、随机事件" class="headerlink" title="样本空间、随机事件"></a>样本空间、随机事件</h2><p>样本空间:随机试验E的可能结果集合<br>样本点:E的每个结果</p><p>随机事件:试验E的样本空间S的子集为E的随机事件</p><p>$若A\subseteq B,B\subset A,则A&#x3D;B$</p><p>$事件A-B称为事件A与B的差事件$</p><p>$若A\cap B&#x3D;\phi,则称事件A与B互斥(互不相容)$</p><p>$若A\cup B&#x3D;S且A\cap B&#x3D;\phi,则称事件A与B为逆事件,又称对立事件$</p><h2 id="等可能概型"><a href="#等可能概型" class="headerlink" title="等可能概型"></a>等可能概型</h2><p>等可能概型(古典概型):试验的样本空间只包含有限个元素,试验中每个基本事件发生的可能性相同</p><h2 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h2><p>条件概率:事件A已发生的条件下事件B发生的概率$P(B|A)&#x3D;P(AB)&#x2F;P(A)$</p><p>全概率公式:试验E的样本空间为S,A为E的事件,$B_1,B_2……B_n$为S的一个划分,且P(B_i)&gt;0(i&#x3D;1,2……,n)则全概率公式为</p><p>$$</p><p>P(A)&#x3D;P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+……+P(A|B_n)P(B_n)<br>$$</p><p>贝叶斯公式:试验E的样本空间为S,A为E的事件,$B_1,B_2……B_n$为S的一个划分,且P(A)&gt;0,P(B_i)&gt;0(i&#x3D;1,2……,n)则，贝叶斯公式为</p><p>$$</p><p>P(B_i|A)&#x3D;P(A|B_i)P(B_i)&#x2F; \sum_{j&#x3D;1}^n P(A|B_j)P(B_j)<br>$$</p><h2 id="独立性"><a href="#独立性" class="headerlink" title="独立性"></a>独立性</h2><p>若$P(AB)&#x3D;P(A)P(B)$则称事件A与B为独立事件</p><h1 id="随机变量及其分布"><a href="#随机变量及其分布" class="headerlink" title="随机变量及其分布"></a>随机变量及其分布</h1><h2 id="离散型随机变量及其分布"><a href="#离散型随机变量及其分布" class="headerlink" title="离散型随机变量及其分布"></a>离散型随机变量及其分布</h2><h3 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="(0-1)分布"></a>(0-1)分布</h3><h3 id="伯努利试验"><a href="#伯努利试验" class="headerlink" title="伯努利试验"></a>伯努利试验</h3><h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h3><p>$\sum_{k&#x3D;0}^\infty P{X&#x3D;k}&#x3D;\sum_{k&#x3D;0}^\infty \frac{e^{-\lambda}\lambda^k}{k!}$</p><h2 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h2><p>函数$F(x)&#x3D;P{X\leq x},-\infty&lt;x&lt;\infty$称为X的分布函数</p><p>对于任意实数$x_1,x_2(x_1&lt;x_2),有$</p><p>$P{x_1\leq X\leq x_2}&#x3D;P{X\leq x_2}-P{X\leq x_1}&#x3D;F(x_2)-F(x_1)$</p><p>分布函数具有一下性质<br>1.F(x)是一个不减函数</p><p>2.$0\leq F(x)\leq1 且F(-\infty)&#x3D;lim_{x\to-\infty}F(x)&#x3D;0.F(\infty)&#x3D;lim_{x\to\infty}F(x)&#x3D;1$</p><p>3.$F(x+0)&#x3D;F(x)$</p><h2 id="连续型随机变量及其概率密度"><a href="#连续型随机变量及其概率密度" class="headerlink" title="连续型随机变量及其概率密度"></a>连续型随机变量及其概率密度</h2><p>概率密度f(x)有以下性质：<br>1.$f(x)\geq0$</p><p>2.$\int_{-\infty}^{\infty}f(x)dx&#x3D;1$</p><p>3.对于任意实数$x_1,x_2(x_1\leq x_2),有P{x_1\leq X\leq x_2}&#x3D;F(x_2)-F(x_1)&#x3D;\int_{x_1}^{x_2}f(x)dx$</p><p>4.若f(x)在点x处连续,则有$F’(x)&#x3D;f(x)$</p><p>下面介绍三种重要的连续型随机变量</p><h3 id="1-均匀分布"><a href="#1-均匀分布" class="headerlink" title="1.均匀分布"></a>1.均匀分布</h3><p>$$<br>f(x)&#x3D;\begin{cases}<br>\frac{1}{b-a},   a&lt;x&lt;b\<br>0,其他<br>\end{cases}<br>$$</p><h3 id="2-指数分布"><a href="#2-指数分布" class="headerlink" title="2.指数分布"></a>2.指数分布</h3><p>$$<br>f(x)&#x3D;\begin{cases}<br>\frac{1}{\theta}e^{-\frac{x}{\theta}},   x&gt;0\<br>0,其他<br>\end{cases}<br>$$</p><h3 id="3-正态分布"><a href="#3-正态分布" class="headerlink" title="3.正态分布"></a>3.正态分布</h3><p>$$<br>f(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty&lt;x&lt;\infty\<br>$$</p><p>标准正态分布<br>$f(x)&#x3D;\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}$</p><h1 id="多维随机变量"><a href="#多维随机变量" class="headerlink" title="多维随机变量"></a>多维随机变量</h1><h2 id="二维随机变量"><a href="#二维随机变量" class="headerlink" title="二维随机变量"></a>二维随机变量</h2><p>$我们称P{X&#x3D;x_i,Y&#x3D;y_i}&#x3D;p_{ij},j,j&#x3D;1,2……为二维离散型随机变量(X,Y)的分布率,或称为随机变量X和Y的联合分布律$</p><p>$F(x,y)&#x3D;\int_{-\infty}^y\int_{-\infty}^x f(u,v)dudv$,则称(X,Y)是二维连续型随机变量,函数f(x,y)称为二维连续型随机变量(X,Y)的概率密度,或称为随机变量X和Y的联合概率密度</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;概率论的基本概念&quot;&gt;&lt;a href=&quot;#概率论的基本概念&quot; class=&quot;headerlink&quot; title=&quot;概率论的基本概念&quot;&gt;&lt;/a&gt;概率论的基本概念&lt;/h1&gt;&lt;h2 id=&quot;样本空间、随机事件&quot;&gt;&lt;a href=&quot;#样本空间、随机事件&quot; class=&quot;he</summary>
+      
+    
+    
+    
+    <category term="学习资料" scheme="http://yiyezhiqiui.github.io/categories/%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%96%99/"/>
+    
+    
+    <category term="欢迎" scheme="http://yiyezhiqiui.github.io/tags/%E6%AC%A2%E8%BF%8E/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你好，世界！</title>
+    <link href="http://yiyezhiqiui.github.io/posts/hello-world/"/>
+    <id>http://yiyezhiqiui.github.io/posts/hello-world/</id>
+    <published>2018-05-06T09:03:12.000Z</published>
+    <updated>2024-11-29T05:29:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎使用 <code>Kratos : Rebirth</code> 这个我们精心打造的 Hexo 主题！希望能在接下来的旅途中与您相伴，共同创造出更多难以忘怀的美好体验。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欢迎使用 &lt;code&gt;Kratos : Rebirth&lt;/code&gt; 这个我们精心打造的 Hexo 主题！希望能在接下来的旅途中与您相伴，共同创造出更多难以忘怀的美好体验。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="全新体验" scheme="http://yiyezhiqiui.github.io/categories/%E5%85%A8%E6%96%B0%E4%BD%93%E9%AA%8C/"/>
+    
+    
+    <category term="欢迎" scheme="http://yiyezhiqiui.github.io/tags/%E6%AC%A2%E8%BF%8E/"/>
+    
+  </entry>
+  
+</feed>
