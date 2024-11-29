@@ -19,15 +19,15 @@
   
     <meta name="keywords" content="欢迎" />
   
-  <meta name="description" content="概率论的基本概念样本空间、随机事件样本空间:随机试验E的可能结果集合样本点:E的每个结果 随机事件:试验E的样本空间S的子集为E的随机事件 $若A\subseteq B,B\subset A,则A&#x3D;B$ $事件A-B称为事件A与B的差事件$ $若A\cap B&#x3D;\phi,则称事件A与B互斥(互不相容)$ $若A\cup B&#x3D;S且A\cap B&#x3D;\phi,则称">
+  <meta name="description" content="概率论的基本概念样本空间、随机事件样本空间:随机试验E的可能结果集合样本点:E的每个结果 随机事件:试验E的样本空间S的子集为E的随机事件 $若A\subseteq B,B\subset A,则A&#x3D;B$ $事件A-B称为事件A与B的差事件$ $若A\cap B&#x3D;\phi,则称事件A与B互斥(互不相容)$ $若A\cup B&#x3D;S且A\cap B&#x3D;\phi,则称事件A与B为逆事件,又称对立事件$ 等可">
 <meta property="og:type" content="article">
 <meta property="og:title" content="概率论知识总结">
 <meta property="og:url" content="http://yiyezhiqiui.github.io/posts/%E6%A6%82%E7%8E%87%E8%AE%BA/index.html">
 <meta property="og:site_name" content="Kratos : Rebirth">
-<meta property="og:description" content="概率论的基本概念样本空间、随机事件样本空间:随机试验E的可能结果集合样本点:E的每个结果 随机事件:试验E的样本空间S的子集为E的随机事件 $若A\subseteq B,B\subset A,则A&#x3D;B$ $事件A-B称为事件A与B的差事件$ $若A\cap B&#x3D;\phi,则称事件A与B互斥(互不相容)$ $若A\cup B&#x3D;S且A\cap B&#x3D;\phi,则称">
+<meta property="og:description" content="概率论的基本概念样本空间、随机事件样本空间:随机试验E的可能结果集合样本点:E的每个结果 随机事件:试验E的样本空间S的子集为E的随机事件 $若A\subseteq B,B\subset A,则A&#x3D;B$ $事件A-B称为事件A与B的差事件$ $若A\cap B&#x3D;\phi,则称事件A与B互斥(互不相容)$ $若A\cup B&#x3D;S且A\cap B&#x3D;\phi,则称事件A与B为逆事件,又称对立事件$ 等可">
 <meta property="og:locale">
 <meta property="article:published_time" content="2024-11-21T16:00:00.000Z">
-<meta property="article:modified_time" content="2024-11-29T05:45:32.894Z">
+<meta property="article:modified_time" content="2024-11-29T08:38:51.322Z">
 <meta property="article:author" content="All contributors">
 <meta property="article:tag" content="欢迎">
 <meta name="twitter:card" content="summary">
@@ -87,8 +87,6 @@
   
 <!-- hexo injector head_end start -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.12.0/dist/katex.min.css">
-
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/hexo-math@4.0.0/dist/style.css">
 <!-- hexo injector head_end end --><meta name="generator" content="Hexo 7.3.0"></head>
 
     <body class="custom-background">
@@ -217,7 +215,7 @@
                         <i class="fa fa-edit"></i> 
                         
                         
-                            ~1.93K
+                            1266
                         
                         字
                     </li>
@@ -237,37 +235,43 @@
             <hr />
             <div itemprop="articleBody"><h1 id="概率论的基本概念"><a href="#概率论的基本概念" class="headerlink" title="概率论的基本概念"></a>概率论的基本概念</h1><h2 id="样本空间、随机事件"><a href="#样本空间、随机事件" class="headerlink" title="样本空间、随机事件"></a>样本空间、随机事件</h2><p>样本空间:随机试验E的可能结果集合<br>样本点:E的每个结果</p>
 <p>随机事件:试验E的样本空间S的子集为E的随机事件</p>
-<p>$若A\subseteq B,B\subset A,则A&#x3D;B$</p>
+<p>$若A\subseteq B,B\subset A,则A=B$</p>
 <p>$事件A-B称为事件A与B的差事件$</p>
-<p>$若A\cap B&#x3D;\phi,则称事件A与B互斥(互不相容)$</p>
-<p>$若A\cup B&#x3D;S且A\cap B&#x3D;\phi,则称事件A与B为逆事件,又称对立事件$</p>
+<p>$若A\cap B=\phi,则称事件A与B互斥(互不相容)$</p>
+<p>$若A\cup B=S且A\cap B=\phi,则称事件A与B为逆事件,又称对立事件$</p>
 <h2 id="等可能概型"><a href="#等可能概型" class="headerlink" title="等可能概型"></a>等可能概型</h2><p>等可能概型(古典概型):试验的样本空间只包含有限个元素,试验中每个基本事件发生的可能性相同</p>
-<h2 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h2><p>条件概率:事件A已发生的条件下事件B发生的概率$P(B|A)&#x3D;P(AB)&#x2F;P(A)$</p>
-<p>全概率公式:试验E的样本空间为S,A为E的事件,$B_1,B_2……B_n$为S的一个划分,且P(B_i)&gt;0(i&#x3D;1,2……,n)则全概率公式为</p>
-<p>$$</p>
-<p>P(A)&#x3D;P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+……+P(A|B_n)P(B_n)<br>$$</p>
-<p>贝叶斯公式:试验E的样本空间为S,A为E的事件,$B_1,B_2……B_n$为S的一个划分,且P(A)&gt;0,P(B_i)&gt;0(i&#x3D;1,2……,n)则，贝叶斯公式为</p>
-<p>$$</p>
-<p>P(B_i|A)&#x3D;P(A|B_i)P(B_i)&#x2F; \sum_{j&#x3D;1}^n P(A|B_j)P(B_j)<br>$$</p>
-<h2 id="独立性"><a href="#独立性" class="headerlink" title="独立性"></a>独立性</h2><p>若$P(AB)&#x3D;P(A)P(B)$则称事件A与B为独立事件</p>
-<h1 id="随机变量及其分布"><a href="#随机变量及其分布" class="headerlink" title="随机变量及其分布"></a>随机变量及其分布</h1><h2 id="离散型随机变量及其分布"><a href="#离散型随机变量及其分布" class="headerlink" title="离散型随机变量及其分布"></a>离散型随机变量及其分布</h2><h3 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="(0-1)分布"></a>(0-1)分布</h3><h3 id="伯努利试验"><a href="#伯努利试验" class="headerlink" title="伯努利试验"></a>伯努利试验</h3><h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h3><p>$\sum_{k&#x3D;0}^\infty P{X&#x3D;k}&#x3D;\sum_{k&#x3D;0}^\infty \frac{e^{-\lambda}\lambda^k}{k!}$</p>
-<h2 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h2><p>函数$F(x)&#x3D;P{X\leq x},-\infty&lt;x&lt;\infty$称为X的分布函数</p>
+<h2 id="条件概率"><a href="#条件概率" class="headerlink" title="条件概率"></a>条件概率</h2><p>条件概率:事件A已发生的条件下事件B发生的概率$P(B|A)=P(AB)/P(A)$</p>
+<p>全概率公式:试验E的样本空间为S,A为E的事件,$B_1,B_2……B_n$为S的一个划分,且P(B_i)&gt;0(i=1,2……,n)则全概率公式为</p>
+<script type="math/tex; mode=display">
+
+P(A)=P(A|B_1)P(B_1)+P(A|B_2)P(B_2)+……+P(A|B_n)P(B_n)</script><p>贝叶斯公式:试验E的样本空间为S,A为E的事件,$B_1,B_2……B_n$为S的一个划分,且P(A)&gt;0,P(B_i)&gt;0(i=1,2……,n)则，贝叶斯公式为</p>
+<script type="math/tex; mode=display">
+
+P(B_i|A)=P(A|B_i)P(B_i)/ \sum_{j=1}^n P(A|B_j)P(B_j)</script><h2 id="独立性"><a href="#独立性" class="headerlink" title="独立性"></a>独立性</h2><p>若$P(AB)=P(A)P(B)$则称事件A与B为独立事件</p>
+<h1 id="随机变量及其分布"><a href="#随机变量及其分布" class="headerlink" title="随机变量及其分布"></a>随机变量及其分布</h1><h2 id="离散型随机变量及其分布"><a href="#离散型随机变量及其分布" class="headerlink" title="离散型随机变量及其分布"></a>离散型随机变量及其分布</h2><h3 id="0-1-分布"><a href="#0-1-分布" class="headerlink" title="(0-1)分布"></a>(0-1)分布</h3><h3 id="伯努利试验"><a href="#伯努利试验" class="headerlink" title="伯努利试验"></a>伯努利试验</h3><h3 id="泊松分布"><a href="#泊松分布" class="headerlink" title="泊松分布"></a>泊松分布</h3><p>$\sum_{k=0}^\infty P\{X=k\}=\sum_{k=0}^\infty \frac{e^{-\lambda}\lambda^k}{k!}$</p>
+<h2 id="随机变量的分布函数"><a href="#随机变量的分布函数" class="headerlink" title="随机变量的分布函数"></a>随机变量的分布函数</h2><p>函数$F(x)=P\{X\leq x\},-\infty&lt;x&lt;\infty$称为X的分布函数</p>
 <p>对于任意实数$x_1,x_2(x_1&lt;x_2),有$</p>
-<p>$P{x_1\leq X\leq x_2}&#x3D;P{X\leq x_2}-P{X\leq x_1}&#x3D;F(x_2)-F(x_1)$</p>
+<p>$P\{x_1\leq X\leq x_2\}=P\{X\leq x_2\}-P\{X\leq x_1\}=F(x_2)-F(x_1)$</p>
 <p>分布函数具有一下性质<br>1.F(x)是一个不减函数</p>
-<p>2.$0\leq F(x)\leq1 且F(-\infty)&#x3D;lim_{x\to-\infty}F(x)&#x3D;0.F(\infty)&#x3D;lim_{x\to\infty}F(x)&#x3D;1$</p>
-<p>3.$F(x+0)&#x3D;F(x)$</p>
+<p>2.$0\leq F(x)\leq1 且F(-\infty)=lim_{x\to-\infty}F(x)=0.F(\infty)=lim_{x\to\infty}F(x)=1$</p>
+<p>3.$F(x+0)=F(x)$</p>
 <h2 id="连续型随机变量及其概率密度"><a href="#连续型随机变量及其概率密度" class="headerlink" title="连续型随机变量及其概率密度"></a>连续型随机变量及其概率密度</h2><p>概率密度f(x)有以下性质：<br>1.$f(x)\geq0$</p>
-<p>2.$\int_{-\infty}^{\infty}f(x)dx&#x3D;1$</p>
-<p>3.对于任意实数$x_1,x_2(x_1\leq x_2),有P{x_1\leq X\leq x_2}&#x3D;F(x_2)-F(x_1)&#x3D;\int_{x_1}^{x_2}f(x)dx$</p>
-<p>4.若f(x)在点x处连续,则有$F’(x)&#x3D;f(x)$</p>
+<p>2.$\int_{-\infty}^{\infty}f(x)dx=1$</p>
+<p>3.对于任意实数$x_1,x_2(x_1\leq x_2),有P\{x_1\leq X\leq x_2\}=F(x_2)-F(x_1)=\int_{x_1}^{x_2}f(x)dx$</p>
+<p>4.若f(x)在点x处连续,则有$F’(x)=f(x)$</p>
 <p>下面介绍三种重要的连续型随机变量</p>
-<h3 id="1-均匀分布"><a href="#1-均匀分布" class="headerlink" title="1.均匀分布"></a>1.均匀分布</h3><p>$$<br>f(x)&#x3D;\begin{cases}<br>\frac{1}{b-a},   a&lt;x&lt;b\<br>0,其他<br>\end{cases}<br>$$</p>
-<h3 id="2-指数分布"><a href="#2-指数分布" class="headerlink" title="2.指数分布"></a>2.指数分布</h3><p>$$<br>f(x)&#x3D;\begin{cases}<br>\frac{1}{\theta}e^{-\frac{x}{\theta}},   x&gt;0\<br>0,其他<br>\end{cases}<br>$$</p>
-<h3 id="3-正态分布"><a href="#3-正态分布" class="headerlink" title="3.正态分布"></a>3.正态分布</h3><p>$$<br>f(x)&#x3D;\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty&lt;x&lt;\infty\<br>$$</p>
-<p>标准正态分布<br>$f(x)&#x3D;\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}$</p>
-<h1 id="多维随机变量"><a href="#多维随机变量" class="headerlink" title="多维随机变量"></a>多维随机变量</h1><h2 id="二维随机变量"><a href="#二维随机变量" class="headerlink" title="二维随机变量"></a>二维随机变量</h2><p>$我们称P{X&#x3D;x_i,Y&#x3D;y_i}&#x3D;p_{ij},j,j&#x3D;1,2……为二维离散型随机变量(X,Y)的分布率,或称为随机变量X和Y的联合分布律$</p>
-<p>$F(x,y)&#x3D;\int_{-\infty}^y\int_{-\infty}^x f(u,v)dudv$,则称(X,Y)是二维连续型随机变量,函数f(x,y)称为二维连续型随机变量(X,Y)的概率密度,或称为随机变量X和Y的联合概率密度</p>
+<h3 id="1-均匀分布"><a href="#1-均匀分布" class="headerlink" title="1.均匀分布"></a>1.均匀分布</h3><script type="math/tex; mode=display">
+f(x)=\begin{cases}
+\frac{1}{b-a},   a<x<b\\
+0,其他
+\end{cases}</script><h3 id="2-指数分布"><a href="#2-指数分布" class="headerlink" title="2.指数分布"></a>2.指数分布</h3><script type="math/tex; mode=display">
+f(x)=\begin{cases}
+\frac{1}{\theta}e^{-\frac{x}{\theta}},   x>0\\
+0,其他
+\end{cases}</script><h3 id="3-正态分布"><a href="#3-正态分布" class="headerlink" title="3.正态分布"></a>3.正态分布</h3><script type="math/tex; mode=display">
+f(x)=\frac{1}{\sqrt{2\pi}\sigma}e^{-\frac{(x-\mu)^2}{2\sigma^2}},-\infty<x<\infty\\</script><p>标准正态分布<br>$f(x)=\frac{1}{\sqrt{2\pi}}e^{-\frac{x^2}{2}}$</p>
+<h1 id="多维随机变量"><a href="#多维随机变量" class="headerlink" title="多维随机变量"></a>多维随机变量</h1><h2 id="二维随机变量"><a href="#二维随机变量" class="headerlink" title="二维随机变量"></a>二维随机变量</h2><p>$我们称P\{X=x_i,Y=y_i\}=p_{ij},j,j=1,2……为二维离散型随机变量(X,Y)的分布率,或称为随机变量X和Y的联合分布律$</p>
+<p>$F(x,y)=\int_{-\infty}^y\int_{-\infty}^x f(u,v)dudv$,则称(X,Y)是二维连续型随机变量,函数f(x,y)称为二维连续型随机变量(X,Y)的概率密度,或称为随机变量X和Y的联合概率密度</p>
 </div>
         </div>
         
@@ -294,7 +298,7 @@
                     <a class="tag-none-link" href="/tags/%E6%AC%A2%E8%BF%8E/" rel="tag">欢迎</a>
                 </div>
                 <div class="pull-date">
-                    <time datetime="2024-11-29T05:45:32.894Z" itemprop="dateModified">最后编辑：2024-11-29</time>
+                    <time datetime="2024-11-29T08:38:51.322Z" itemprop="dateModified">最后编辑：2024-11-29</time>
                 </div>
             </div>
         </footer>
