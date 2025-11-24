@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>Kratos : Rebirth</title>
+  
+  <subtitle>一个可爱而现代的 Hexo 主题</subtitle>
+  <link href="https://krt.moe/atom.xml" rel="self"/>
+  
+  <link href="https://krt.moe/"/>
+  <updated>2025-11-24T13:57:14.183Z</updated>
+  <id>https://krt.moe/</id>
+  
+  <author>
+    <name>All contributors</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>英语</title>
+    <link href="https://krt.moe/posts/%E8%8B%B1%E8%AF%AD/"/>
+    <id>https://krt.moe/posts/%E8%8B%B1%E8%AF%AD/</id>
+    <published>2025-11-23T16:00:00.000Z</published>
+    <updated>2025-11-24T13:57:14.183Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="词汇"><a href="#词汇" class="headerlink" title="词汇"></a>词汇</h1><h1 id="词组"><a href="#词组" class="headerlink" title="词组"></a>词组</h1>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;词汇&quot;&gt;&lt;a href=&quot;#词汇&quot; class=&quot;headerlink&quot; title=&quot;词汇&quot;&gt;&lt;/a&gt;词汇&lt;/h1&gt;&lt;h1 id=&quot;词组&quot;&gt;&lt;a href=&quot;#词组&quot; class=&quot;headerlink&quot; title=&quot;词组&quot;&gt;&lt;/a&gt;词组&lt;/h1&gt;</summary>
+      
+    
+    
+    
+    <category term="考研复习" scheme="https://krt.moe/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E4%B9%A0/"/>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>你好，世界！</title>
+    <link href="https://krt.moe/posts/hello-world/"/>
+    <id>https://krt.moe/posts/hello-world/</id>
+    <published>2018-05-06T09:03:12.000Z</published>
+    <updated>2025-11-24T13:47:58.330Z</updated>
+    
+    <content type="html"><![CDATA[<p>欢迎使用 <code>Kratos : Rebirth</code> 这个我们精心打造的 Hexo 主题！希望能在接下来的旅途中与您相伴，共同创造出更多难以忘怀的美好体验。</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;p&gt;欢迎使用 &lt;code&gt;Kratos : Rebirth&lt;/code&gt; 这个我们精心打造的 Hexo 主题！希望能在接下来的旅途中与您相伴，共同创造出更多难以忘怀的美好体验。&lt;/p&gt;
+</summary>
+      
+    
+    
+    
+    <category term="全新体验" scheme="https://krt.moe/categories/%E5%85%A8%E6%96%B0%E4%BD%93%E9%AA%8C/"/>
+    
+    
+    <category term="欢迎" scheme="https://krt.moe/tags/%E6%AC%A2%E8%BF%8E/"/>
+    
+  </entry>
+  
+</feed>
