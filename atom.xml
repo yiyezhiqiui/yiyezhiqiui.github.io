@@ -6,7 +6,7 @@
   <link href="https://krt.moe/atom.xml" rel="self"/>
   
   <link href="https://krt.moe/"/>
-  <updated>2026-03-05T07:42:30.870Z</updated>
+  <updated>2026-03-05T10:14:27.876Z</updated>
   <id>https://krt.moe/</id>
   
   <author>
@@ -21,8 +21,15 @@
     <link href="https://krt.moe/posts/%E5%8A%9B%E6%89%A3%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"/>
     <id>https://krt.moe/posts/%E5%8A%9B%E6%89%A3%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/</id>
     <published>2026-03-04T16:00:00.000Z</published>
-    <updated>2026-03-05T07:42:30.870Z</updated>
+    <updated>2026-03-05T10:14:27.876Z</updated>
     
+    <content type="html"><![CDATA[<h1 id="滑动窗口"><a href="#滑动窗口" class="headerlink" title="滑动窗口"></a>滑动窗口</h1><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">滑动窗口可以用于解决查找子串的问题，可以用于解决需要不重复类型的数据或者字符串等等。</span><br></pre></td></tr></table></figure><p>“<a href="https://yiyezhiqiui.github.io/images/%E5%8A%9B%E6%89%A3%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/1.png">https://yiyezhiqiui.github.io/images/力扣代码练习/1.png</a>“</p>]]></content>
+    
+    
+      
+      
+    <summary type="html">&lt;h1 id=&quot;滑动窗口&quot;&gt;&lt;a href=&quot;#滑动窗口&quot; class=&quot;headerlink&quot; title=&quot;滑动窗口&quot;&gt;&lt;/a&gt;滑动窗口&lt;/h1&gt;&lt;figure class=&quot;highlight plaintext&quot;&gt;&lt;table&gt;&lt;tr&gt;&lt;td class=&quot;gutter&quot;</summary>
+      
     
     
     
@@ -38,7 +45,7 @@
     <link href="https://krt.moe/posts/%E6%95%B0%E5%AD%A6/"/>
     <id>https://krt.moe/posts/%E6%95%B0%E5%AD%A6/</id>
     <published>2026-03-04T16:00:00.000Z</published>
-    <updated>2026-03-05T07:42:06.329Z</updated>
+    <updated>2026-03-05T07:49:35.574Z</updated>
     
     
     
