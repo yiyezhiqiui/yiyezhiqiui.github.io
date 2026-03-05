@@ -6,7 +6,7 @@
   <link href="https://krt.moe/atom.xml" rel="self"/>
   
   <link href="https://krt.moe/"/>
-  <updated>2026-01-06T12:30:19.047Z</updated>
+  <updated>2026-03-05T07:42:30.870Z</updated>
   <id>https://krt.moe/</id>
   
   <author>
@@ -15,6 +15,40 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>力扣代码练习</title>
+    <link href="https://krt.moe/posts/%E5%8A%9B%E6%89%A3%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"/>
+    <id>https://krt.moe/posts/%E5%8A%9B%E6%89%A3%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/</id>
+    <published>2026-03-04T16:00:00.000Z</published>
+    <updated>2026-03-05T07:42:30.870Z</updated>
+    
+    
+    
+    
+    <category term="考研复习" scheme="https://krt.moe/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="https://krt.moe/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>数学</title>
+    <link href="https://krt.moe/posts/%E6%95%B0%E5%AD%A6/"/>
+    <id>https://krt.moe/posts/%E6%95%B0%E5%AD%A6/</id>
+    <published>2026-03-04T16:00:00.000Z</published>
+    <updated>2026-03-05T07:42:06.329Z</updated>
+    
+    
+    
+    
+    <category term="考研复习" scheme="https://krt.moe/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E4%B9%A0/"/>
+    
+    
+    <category term="学习" scheme="https://krt.moe/tags/%E5%AD%A6%E4%B9%A0/"/>
+    
+  </entry>
   
   <entry>
     <title>英语</title>
