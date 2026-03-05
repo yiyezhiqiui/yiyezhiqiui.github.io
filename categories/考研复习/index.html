@@ -1,169 +1,426 @@
 <!DOCTYPE html>
-<html lang="en">
- <head> 
-  <meta charset="utf-8" /> 
-  <title>Hexo</title> 
-  <link rel="icon" href="/images/fav.png" /> 
-  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
-  <meta name="keywords" content="" />
-  <meta name="description" content="" /> 
-  <link rel="canonical" href="http://example.com" /> 
-  <link rel="stylesheet" href="/css/style.css" /> 
-  <link rel="stylesheet" href="/css/mdui.css" importance="high"/> 
-  
-  <script src="//cdn.kuri.ink/js/mdui/mdui.min.js" async></script>
-  <style>
-   @import url("/css/iconfont.css");
-  </style>
- <meta name="generator" content="Hexo 8.1.1"></head> 
- <body> 
-   <script>
-    let images = "https://api.ee123.net/img/bingimg/dayimg.jpg"
-    images = images.split(',')
-    let currentIndex = 0;
+<html 
+	lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		
+<link rel="stylesheet" href="/css/layout.css">
 
-    function changeBackground() {
-        //document.getElementById("bg").style.opacity = 1; // 渐隐
-        setTimeout(() => {
-            document.getElementById("bg").style.backgroundImage = `url(${images[currentIndex]})`;
-            document.getElementById("bg").style.opacity = 1; // 渐显
-            currentIndex = (currentIndex + 1) % images.length;
-        }, 1000); // 与transition时间一致
-    }
+		
+		<title> Categories：考研复习 -  Hexo</title>
+		<!-- <link rel="stylesheet" href="https://unpkg.com/mdui@1.0.2/dist/css/mdui.min.css" /> -->
+		<!-- <script src="https://unpkg.com/mdui@1.0.2/dist/js/mdui.min.js"></script> -->
+		
+<link rel="stylesheet" href="/lib/mdui/mdui.min.css">
 
-    changeBackground()
-    setInterval(changeBackground, 15000); // 每15秒切换一次背景
-</script>
-  <div class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-layout-auto mdui-loaded"> 
-   <!-- background --> 
-   <div id="bg" class="index_bg"></div> 
-   <!-- main --> 
-   <div>
-    
-    <header class="appbar mdui-appbar mdui-appbar-fixed" importance="high"> 
-    <div class="mdui-toolbar mdui-color-theme card-content"> 
-     <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"> <i class="mdui-icon material-icons" mdui-tooltip="{content: '菜单'}">menu</i> </span> 
-     <div class="mdui-toolbar-spacer">
-       
-      <chizaobook style="line-height: 1em; color:#F5F5F5;;"> 
-       <script>
-        let app = document.createElement('script');
-            app.src = 'https://cdn.jsdelivr.net/gh/ChizaoProject/chizaobook@master/app.js';
-            app.async = true;
-            app.onload = function () {
-              chizaobook = new Chizaobook({
-                container: "chizaobook", // string
-                packageSource: "https://cdn.jsdelivr.net/gh/ChizaoProject/Packages@master/package_source.json", // string
-                packageType: null // int
-          })
-          chizaobook.selector();
-          };
-        document.head.appendChild(app);
-       </script> 
-       <!--<div class="mdui-chip" style="margin: auto; position: fixed; transform: translate(0, -50%);">
-             <span id="time" class="mdui-chip-title" style="transform: translate(0, -50%);"></span>
-             <script>
-               var datetime = new Date();
-               console.log(datetime);
-             </script>
-           </div>
-           --> 
-      </chizaobook>
-      
-     </div> 
-     <a href="https://github.com/yiyezhiqiui" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Github'}"> 
-      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve" class="mdui-icon" style="width: 24px;height:24px;"> 
-       <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path> 
-      </svg> </a> 
-    </div> 
-   </header>  
+		
+<script src="/lib/mdui/mdui.min.js"></script>
 
-    <div class="mdui-drawer mdui-drawer-close sidebar" id="main-drawer"> 
-     <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 75px;"> 
-       
-      <div class="
-                mdui-collapse-item
-                "> 
-       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple"> 
-        <i class="
-                    mdui-list-item-icon
-                    mdui-icon
-                    material-icons
-                    mdui-text-color-blue">near_me</i>
-        <div class="mdui-list-item-content">
-         考研复习
-        </div> 
-        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i> 
-       </div>
+		<!-- lazyload -->
+		
+<script src="/lib/lazysizes.js"></script>
+
+		<!-- smooth-scrolling -->
+		
+<script src="/lib/smooth-scrolling.js"></script>
+
+		<!-- highlight -->
+		
+<link rel="stylesheet" href="/lib/highlight/atom-one-dark.min.css">
+
+		
+<script src="/lib/highlight/highlight.min.js"></script>
+
+		<!-- 预置 kiraicon -->
+		
+<link rel="stylesheet" href="/lib/iconfont/iconfont.css">
+
+		
+		<link
+			rel="shortcut icon"
+			href="https://yiyezhiqiui.github.io/assets/favicon.png"
+			type="image/png"
+		/>
+		
+<link rel="stylesheet" href="/deps/css/APlayer.min.css">
+
+		
+		
+<script src="/deps/js/APlayer.min.js"></script>
+<script src="/deps/js/Meting.min.js"></script>
+
+	<meta name="generator" content="Hexo 7.3.0"></head>
+
+	<body>
+		<div
+			class="kira-background"
+			style="background-image: url('https://yiyezhiqiui.github.io/assets/back.jpg')"
+		></div>
+		<div class="kira-header">
+    <a
+        class="kira-drawer-button mdui-ripple"
+        title="导航栏"
+        onclick="document.querySelector('.kira-sidebar-modal').classList.add('show');document.querySelector('.kira-sidebar#sidebar').classList.add('show');"
+    >
+        <i class="kirafont icon-menu"></i>
+    </a>
+    <a href="/" title="Hexo">
+        <img
+			src="https://yiyezhiqiui.github.io/assets/logo.png"
+			alt="John Doe"
+		/>
+    </a>
+</div>
+		<div class="kira-body">
+			<div class="kira-sidebar" id="sidebar">
+	<div class="kira-avatar mdui-ripple">
+		<a target="_blank" rel="noopener" href="https://yiyezhiqiui.github.io/assets/logo.png" title="John Doe">
+			<img
+				src="https://yiyezhiqiui.github.io/assets/logo.png"
+				alt="John Doe"
+			/>
+		</a>
+	</div>
+	<div class="kira-count">
+		<div><span>文章</span>4</div>
+		<div><span>标签</span>2</div>
+		<div><span>分类</span>2</div>
+	</div>
+	<div class="kira-list">
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/"
+			title="回到首页"
+		>
+			<i
+				class="kirafont
+					
+						icon-home
+					"
+			></i>
+			<div class="kira-list-item-content">
+				回到首页
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/archive.html"
+			title="文章归档"
+		>
+			<i
+				class="kirafont
+					
+						icon-container
+					"
+			></i>
+			<div class="kira-list-item-content">
+				文章归档
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/about.html"
+			title="关于本人"
+		>
+			<i
+				class="kirafont
+					
+						icon-user
+					"
+			></i>
+			<div class="kira-list-item-content">
+				关于本人
+			</div>
+		</a>
+		
+		<a
+			class="kira-list-item mdui-ripple false"
+			href="/friends.html"
+			title="我的朋友"
+		>
+			<i
+				class="kirafont
+					
+						icon-team
+					"
+			></i>
+			<div class="kira-list-item-content">
+				我的朋友
+			</div>
+		</a>
+		
+	</div>
+	<aside id="kira-sidebar">
+		
+			<div class="kira-widget-wrap">
+	<div class="kira-widget kira-social">
+		
+			<a
+				class="mdui-ripple"
+				href="tencent://AddContact/?fromId=45&fromSubId=1&subcmd=all&uin=1099139061&website=www.oicqzone.com"
+				target="_blank"
+				mdui-tooltip="{content: 'QQ'}"
+				style="color: rgb(49, 174, 255); background-color: rgba(49, 174, 255, .1);"
+			>
+				<i
+					class="kirafont
+					
+						icon-QQ
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://space.bilibili.com/444159366"
+				target="_blank"
+				mdui-tooltip="{content: '哔哩哔哩'}"
+				style="color: rgb(231, 106, 141); background-color: rgba(231, 106, 141, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-bilibili
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://github.com/yiyezhiqiui/"
+				target="_blank"
+				mdui-tooltip="{content: 'GitHub'}"
+				style="color: rgb(25, 23, 23); background-color: rgba(25, 23, 23, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-github
+					"
+				></i>
+			</a>
+		
+			<a
+				class="mdui-ripple"
+				href="https://gitee.com/<你的gitee id>"
+				target="_blank"
+				mdui-tooltip="{content: 'Gitee'}"
+				style="color: rgb(165, 15, 15); background-color: rgba(165, 15, 15, .15);"
+			>
+				<i
+					class="kirafont
+					
+						icon-gitee
+					"
+				></i>
+			</a>
+		
+	</div>
+</div>
+
+		
+			
+  <div class="kira-widget-wrap">
+    <h3 class="kira-widget-title">分类</h3>
+    <div class="kira-widget">
+      <ul class="category-list">
         
-         <div class="mdui-collapse-item-body mdui-list"> 
-          <a href="https://yiyezhiqiui.github.io/英语" target="_blank" mdui-tooltip="{content: 'example'}" class="
-                        mdui-list-item
-                        mdui-ripple
-                        ">英语</a> 
-         </div>
-         
-      </div> 
-      
-     </div> 
-    </div> 
-   </div> 
+        
 
-   <div id="container" class="container"> 
-    <div class="card"> 
-     <div id="card-content" class="card-content"> 
-      <center>
-       <div class="logo"></div>
-       <style>
-        .logo {
-	        width: 100px;
-	        height: 100px;
-	        margin-top: -50px;
-	        border:1px soild white;
-	        background: url('') no-repeat center;
-	        border-radius: 50px;
-	        background-size: 100px;
-        }
-       </style>
-      </center> 
-      <b class="nickname"></b> 
-      <br /> 
-      <b class="motto"></b> 
-     </div> 
-    </div> 
-
-    <div class="card" style="margin-top: 1%;"> 
-     <div id="card-content" class="card-content"> 
-      <div class="social">
-         
-        <a href="https://example.com" target="_blank"><button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'example'}"><span class="iconfont iconbili"></span></button></a> 
-       
-      </div> 
-     </div> 
-    </div> 
-
-   </div>  
-
-   <!-- footer --> 
-   <div id="footer" class="footer"> 
-    <p class="remark">
-      <br>
-      
-      <br>Powered By <a href="https://hexo.io/" target="_blank"> Hexo </a> And <a href="https://mdui.org" target="_blank">MDUI</a>.<br /> Theme ❤ <a href="https://kuri.ink/" target="">kuri</a>. 
-
-    </p> 
-   </div>  
-   <script async="" src="//blog.kuri.ink/lib/aplayer@1.10.0/aplayer.min.js" type="text/javascript"></script> 
-   <script async="" src="//blog.kuri.ink/lib/meting/meting.min.js" type="text/javascript"></script>
-
-   
-
-   
-      <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
-      <script>LA.init({id: "",ck: ""})</script>
-   
-
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/全新体验/">
+              全新体验
+            </a>
+            <span class="category-list-count">1</span>
+          </li>
+        
+          <li class="category-list-item">
+            <a class="category-list-link" href="/categories/考研复习/">
+              考研复习
+            </a>
+            <span class="category-list-count">3</span>
+          </li>
+        
+      </ul>
+    </div>
   </div>
- </body>
+
+		
+			
+	<div class="kira-widget-wrap">
+		<div id="randomtagcloud" class="kira-widget tagcloud kira-rainbow">
+			<a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 20px;">学习</a> <a href="/tags/%E6%AC%A2%E8%BF%8E/" style="font-size: 10px;">欢迎</a>
+		</div>
+		
+	</div>
+
+
+		
+			
+	<div class="kira-widget-wrap">
+		<h3 class="kira-widget-title">
+			Archive
+		</h3>
+		<div class="kira-widget">
+			<ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2026/">2026</a><span class="archive-list-count">2</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2025/">2025</a><span class="archive-list-count">1</span></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2018/">2018</a><span class="archive-list-count">1</span></li></ul>
+		</div>
+	</div>
+
+
+		
+	</aside>
+	<div class="kira-copyright">
+		&copy; 2026
+		<a href="/">John Doe</a>
+		Powered by <a href="http://hexo.io/" target="_blank">Hexo</a> &
+		<a href="https://github.com/ch1ny/kira-hexo/" target="_blank">Kira-Hexo</a>
+		<br />
+		
+		
+	</div>
+</div>
+<div
+	class="kira-sidebar-modal"
+	id="sidebar-modal"
+	onclick="(function(self) {
+		self.classList.remove('show');
+		document.querySelector('.kira-sidebar.show#sidebar').classList.remove('show');
+	})(this)"
+></div>
+			<div class="kira-content">
+				<div id="kira-top-header"></div>
+				<div class="kira-main-content">
+					<div class="kira-posts">
+    
+        <div class="kira-post">
+            <a href="/2026/03/05/%E5%8A%9B%E6%89%A3%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/">
+                
+                <div
+                    class="kira-post-cover mdui-ripple"
+                    style="padding-bottom: '56.25%'"
+                >
+                    <img
+                        data-src="https://yiyezhiqiui.github.io/images/力扣代码练习/cover.png"
+                        data-sizes="auto"
+                        alt="力扣代码练习"
+                        class="lazyload kira-post-cover-image"
+                    />
+                    <h1>力扣代码练习</h1>
+                </div>
+                
+            </a>
+
+            <div class="kira-post-meta kira-rainbow">
+                <a>
+                    <i class="kirafont icon-calendar-fill"></i>
+                    2026年03月05日
+                </a>
+                <a>
+                    <i class="kirafont icon-edit-fill"></i>
+                    45 字
+                </a>
+                <a>
+                    <i class="kirafont icon-time-circle-fill"></i>大概
+                    1 分钟
+                </a>
+            </div>
+    
+            
+        </div>
+        <div class="kira-hr"></div>
+    
+        <div class="kira-post">
+            <a href="/2026/03/05/%E6%95%B0%E5%AD%A6/">
+                
+                <div
+                    class="kira-post-cover mdui-ripple"
+                    style="padding-bottom: '56.25%'"
+                >
+                    <img
+                        data-src="https://yiyezhiqiui.github.io/images/数学/cover.jpg"
+                        data-sizes="auto"
+                        alt="数学"
+                        class="lazyload kira-post-cover-image"
+                    />
+                    <h1>数学</h1>
+                </div>
+                
+            </a>
+
+            <div class="kira-post-meta kira-rainbow">
+                <a>
+                    <i class="kirafont icon-calendar-fill"></i>
+                    2026年03月05日
+                </a>
+                <a>
+                    <i class="kirafont icon-edit-fill"></i>
+                    0 字
+                </a>
+                <a>
+                    <i class="kirafont icon-time-circle-fill"></i>大概
+                    1 分钟
+                </a>
+            </div>
+    
+            
+        </div>
+        <div class="kira-hr"></div>
+    
+        <div class="kira-post">
+            <a href="/2025/11/24/%E8%8B%B1%E8%AF%AD/">
+                
+                <div
+                    class="kira-post-cover mdui-ripple"
+                    style="padding-bottom: '56.25%'"
+                >
+                    <img
+                        data-src="https://yiyezhiqiui.github.io/images/英语/cover.png"
+                        data-sizes="auto"
+                        alt="英语"
+                        class="lazyload kira-post-cover-image"
+                    />
+                    <h1>英语</h1>
+                </div>
+                
+            </a>
+
+            <div class="kira-post-meta kira-rainbow">
+                <a>
+                    <i class="kirafont icon-calendar-fill"></i>
+                    2025年11月24日
+                </a>
+                <a>
+                    <i class="kirafont icon-edit-fill"></i>
+                    442 字
+                </a>
+                <a>
+                    <i class="kirafont icon-time-circle-fill"></i>大概
+                    2 分钟
+                </a>
+            </div>
+    
+            
+        </div>
+        <div class="kira-hr"></div>
+    
+</div>
+
+				</div>
+			</div>
+			<div class="kira-right-column">
+	<a onclick="document.querySelector('#kira-top-header').scrollIntoView({behavior: 'smooth'});" class="kira-backtotop" aria-label="回到顶部" title="回到顶部">
+		<button class="mdui-fab mdui-ripple">
+			<i class="kirafont icon-caret-up"></i>
+		</button>
+	</a>
+</div>
+
+		</div>
+	</body>
 </html>
