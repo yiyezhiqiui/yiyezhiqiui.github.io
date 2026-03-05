@@ -1,581 +1,169 @@
 <!DOCTYPE html>
-<html lang="zh">
-    <head>
-  <!-- 元数据 -->
-  <meta charset="utf-8">
+<html lang="en">
+ <head> 
+  <meta charset="utf-8" /> 
+  <title>Hexo</title> 
+  <link rel="icon" href="/images/fav.png" /> 
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge,chrome=1" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+  <meta name="keywords" content="" />
+  <meta name="description" content="" /> 
+  <link rel="canonical" href="http://example.com" /> 
+  <link rel="stylesheet" href="/css/style.css" /> 
+  <link rel="stylesheet" href="/css/mdui.css" importance="high"/> 
   
-    <link rel="icon" href="/assets/favicon.png">
-  
-  
-  <title>文章归档: 2026 | yiyezhiqiu的博客</title>
-  <link rel="canonical" href="https://krt.moe/archives/2026/index.html">
-  <meta name="author" content="All contributors" />
-  <meta http-equiv="Cache-Control" content="no-transform" />
-  <meta http-equiv="Cache-Control" content="no-siteapp" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="robots" content="index,follow" />
-  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
-  <meta name="format-detection" content="telphone=no, email=no" />
-  
-    <meta name="keywords" content="hexo,theme,kratos-rebirth" />
-  
-  <meta name="description" content="欢迎使用这个主题，希望能给您带来美好的体验。">
-<meta property="og:type" content="website">
-<meta property="og:title" content="文章归档: 2026">
-<meta property="og:url" content="https://krt.moe/archives/2026/index.html">
-<meta property="og:site_name" content="yiyezhiqiu的博客">
-<meta property="og:description" content="欢迎使用这个主题，希望能给您带来美好的体验。">
-<meta property="og:locale">
-<meta property="article:author" content="All contributors">
-<meta property="article:tag" content="hexo">
-<meta property="article:tag" content="kratos-rebirth">
-<meta property="article:tag" content="theme">
-<meta name="twitter:card" content="summary">
-  
-    <link rel="alternate" href="/atom.xml" title="yiyezhiqiu的博客" type="application/atom+xml">
-  
-  <!-- 样式表文件 -->
-  <link rel="stylesheet" id="kratos-css" href="/css/kr-core.min.css" media="all"></link>
-  
-    <link rel="stylesheet" id="highlight-css" href="/css/highlight/highlight.js/night-eighties.min.css" media="all"></link>
-  
-  <link rel="stylesheet" id="theme-light-css" href="/css/kr-theme/light.min.css" media="all"></link>
-  <link rel="stylesheet" id="theme-dark-css" href="/css/kr-theme/dark.min.css" media="(prefers-color-scheme: dark)"></link>
-  <script src="/js/kr-theme.min.js"></script>
-  <link rel="stylesheet" id="fontawe-css" href="/vendors/font-awesome@4.7.0/css/font-awesome.min.css" media="all"></link>
-  
-    <link rel="stylesheet" id="nprogress-css" href="/vendors/nprogress@0.2.0/nprogress.css" media="all"></link>
-  
-  
-    <link rel="stylesheet" href="/vendors/viewerjs@1.11.6/dist/viewer.min.css"></link>
-  
-  <!-- 不得不预先加载的一些JS文件 -->
-  
-    <script src="/vendors/qr-code-styling@1.6.0-rc.1/lib/qr-code-styling.js"></script>
-  
-  <!-- 自定义站点横幅和背景 -->
+  <script src="//cdn.kuri.ink/js/mdui/mdui.min.js" async></script>
   <style>
-    
-      .kratos-cover.kratos-cover-2 {
-        background-image: url('/assets/banner.jpg');
-      }
-      html[data-theme="dark"] .kratos-cover.kratos-cover-2 {
-        background-image: url('/assets/banner.jpg');
-      }
-    
-    
-      @media(min-width:768px) {
-        body.custom-background {
-          background-image: url('/assets/back.jpg');
-        }
-        html[data-theme="dark"] body.custom-background {
-          background-image: url('/assets/back.jpg');
-        }
-      }
-    
-    
-      .widget-kratos-about .photo-background {
-        background-image: url('/images/default.webp');
-      }
-      html[data-theme="dark"] .widget-kratos-about .photo-background {
-        background-image: url('/images/default.webp');
-      }
-    
+   @import url("/css/iconfont.css");
   </style>
+ <meta name="generator" content="Hexo 8.1.1"></head> 
+ <body> 
+   <script>
+    let images = "https://api.ee123.net/img/bingimg/dayimg.jpg"
+    images = images.split(',')
+    let currentIndex = 0;
 
-  <!-- 额外的追加注入项 -->
-  
-<meta name="generator" content="Hexo 8.1.1"></head>
-
-    <body class="custom-background">
-        <div id="kratos-wrapper">
-    <div id="kratos-page">
-        <div id="kratos-header">
-            <header id="kratos-desktop-topnav" class="kratos-topnav">
-                <div class="container">
-                    <div class="nav-header">
-                        <nav id="kratos-menu-wrap">
-                            <ul id="kratos-primary-menu" class="sf-menu">
-                                
-                                    <li>
-                                        
-                                            <a href="/">
-                                        
-                                            
-                                                <i class="fa fa-home"></i>
-                                            
-                                            首页
-                                        </a>
-                                        
-                                    </li>
-                                
-                                    <li>
-                                        
-                                            <a href="/archives/">
-                                        
-                                            
-                                                <i class="fa fa-file"></i>
-                                            
-                                            档案馆
-                                        </a>
-                                        
-                                    </li>
-                                
-                                    <li>
-                                        
-                                            <a>
-                                        
-                                            
-                                                <i class="fa fa-link"></i>
-                                            
-                                            链接
-                                        </a>
-                                        
-                                            <ul class="sub-menu">
-                                                
-                                                    <li>
-                                                        <a target="_blank" rel="noopener" href="https://github.com/Candinya/Kratos-Rebirth">
-                                                            
-                                                                <i class="fa fa-code"></i>
-                                                            
-                                                            代码仓库
-                                                        </a>
-                                                    </li>
-                                                
-                                                    <li>
-                                                        <a target="_blank" rel="noopener" href="https://wiki.krt.moe">
-                                                            
-                                                                <i class="fa fa-book"></i>
-                                                            
-                                                            项目文档
-                                                        </a>
-                                                    </li>
-                                                
-                                            </ul>
-                                        
-                                    </li>
-                                
-                                    <li>
-                                        
-                                            <a href="/linklist-example/">
-                                        
-                                            
-                                                <i class="fa fa-link"></i>
-                                            
-                                            链接列表
-                                        </a>
-                                        
-                                    </li>
-                                
-                            </ul>
-                        </nav>
-                    </div>
-                </div>
-            </header>
-            <header id="kratos-mobile-topnav" class="kratos-topnav">
-                <div class="container">
-                    <div class="color-logo"><a href="/">yiyezhiqiu的博客</a></div>
-                    <div id="kratos-nav-toggle-wrapper" class="nav-toggle">
-                        <a id="kratos-nav-toggle" class="kratos-nav-toggle">
-                            <i></i>
-                        </a>
-                    </div>
-                </div>
-            </header>
-        </div>
-        <div class="kratos-start kratos-hero-2">
-            <!-- <div class="kratos-overlay"></div> -->
-            <div class="kratos-cover kratos-cover-2 text-center">
-                <div class="desc desc2 animate-box">
-                    <a href="/">
-                        <h2>yiyezhiqiu的博客</h2> <br />
-                        <span></span>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <div id="kratos-blog-post">
-            <div class="container">
-                <div id="main" class="row">
-
-
-        
-
-            
-
-            <section class="kr-main-col col-md-8">
-
-        
-
-            
-<style>
-  .post-meta time{color:#00a7e0}
-  @media (max-width:767px){.posts-collapse{margin:0 20px}
-  .posts-collapse .post-meta,
-  .posts-collapse .post-title{display:block;width:auto;text-align:left}}
-  .posts-collapse{position:relative}
-  .posts-collapse::after{content:" ";position:absolute;top:20px;left:0;margin-left:-2px;width:4px;height:calc(100% - 35px);background:#f5f5f5;z-index:-1}
-  @media (max-width:991px){.posts-collapse{margin:0 20px}}
-  .posts-collapse .collection-title{position:relative}
-  .posts-collapse .collection-title h1,
-  .posts-collapse .collection-title h2{margin-left:20px}
-  .posts-collapse .collection-title small{color:#bbb;margin-left:5px}
-  .posts-collapse .collection-title::before{content:" ";position:absolute;left:0;top:50%;margin-left:-4px;margin-top:-4px;width:8px;height:8px;background:#bbb;border-radius:50%}
-  .posts-collapse .post-header{position:relative;transition-duration:.2s;transition-timing-function:ease-in-out;transition-delay:0s;transition-property:border}
-  .posts-collapse .post-header::before{content:" ";position:absolute;left:0;top:12px;width:6px;height:6px;margin-left:-4px;background:#bbb;border-radius:50%;border:1px solid #fff;transition: all .3s ease-in-out}
-  .posts-collapse .post-header:hover{border-bottom-color:#666}
-  .posts-collapse .post-header:hover::before{background:#222}
-  .posts-collapse .post-meta{position:absolute;font-size:12px;left:20px;top:5px}
-  .posts-collapse .kr-comments-count{display:none}
-  .posts-collapse .post-title{margin-left:70px;font-size:16px;font-weight:400;line-height:inherit}
-  .posts-collapse .post-title::after{margin-left:3px;opacity:.6}
-  .posts-collapse .post-title a{color:#666;border-bottom:none}
-</style>
-
-  <article>
-      <div class="kratos-hentry kratos-page-inner clearfix">
-          <header class="kratos-page-header">
-            <h1 class="kratos-page-title text-center" itemprop="name headline">文章归档</h1>
-          </header>
-          <div class="kratos-page-content kr-archive">
-            <div id="archives">
-              <div class="post-block archive post" style="margin-left: 2em;">
-                <h3 class="archive-page-counter">当前共有 4 篇文章 (゜-゜)つロ 干杯~</h3>
-                <div class="posts-collapse">
-                  
-                  
-                    
-                    
-                      <!-- 没遇到Title的会被自动忽略年份，即使并不一致 -->
-                      
-                      <div class="collection-title">
-                        <a href="/archives/2026/"><h2 class="archive-year">2026</h2></a>
-                      </div>
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/posts/%E5%8A%9B%E6%89%A3%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">力扣代码练习</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2026-03-04T16:00:00.000Z">
-                              03-05
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                    
-                    
-                    
-                      <article class="post" itemscope itemtype="https://schema.org/Article">
-                        <header class="post-header">
-                          <h3 class="post-title">
-                            
-                                <a class="post-title-link" href="/posts/%E6%95%B0%E5%AD%A6/" itemprop="mainEntityOfPage">
-                                  <span itemprop="name headline">数学</span>
-                                </a>
-                            
-                          </h3>
-                          <div class="post-meta">
-                            <time class="post-time" itemprop="datePublished"
-                                  datetime="2026-03-04T16:00:00.000Z">
-                              03-05
-                            </time>
-                          </div>
-                        </header>
-                      </article>
-                    
-                  
-                </div>
-              </div>
-            </div>
-        </div>
-      </div>
-      
-  </article>
-
-
-        
-
-            </section>
-
-            
-                
-
-<section id="kratos-widget-area" class="col-md-4 hidden-xs hidden-sm">
-    <!-- 文章和页面根据splitter来分割，没有的话就从头开始设置为sticky -->
-    
-        <div class="sticky-area">
-    
-    
-                <aside id="krw-about" class="widget widget-kratos-about clearfix">
-    <div class="photo-background"></div>
-    <div class="photo-wrapper clearfix">
-        <div class="photo-wrapper-tip text-center">
-            <img class="about-photo" src="/assets/logo.jpg" alt="All contributors" loading="lazy" decoding="auto" />
-        </div>
-    </div>
-    <div class="textwidget">
-        <p class="text-center">欢迎使用这个主题，希望能给您带来美好的体验。</p>
-    </div>
-    <div class="site-meta">
-        <a class="meta-item" href="/archives/">
-            <span class="title">
-                文章
-            </span>
-            <span class="count">
-                4
-            </span>
-        </a>
-        <a class="meta-item" href="/categories/">
-            <span class="title">
-                分类
-            </span>
-            <span class="count">
-                2
-            </span>
-        </a>
-        <a class="meta-item" href="/tags/">
-            <span class="title">
-                标签
-            </span>
-            <span class="count">
-                2
-            </span>
-        </a>
-    </div>
-</aside>
-            
-                
-  <aside id="krw-categories" class="widget widget-kratos-categories clearfix">
-    <h4 class="widget-title"><i class="fa fa-folder"></i>分类列表</h4>
-      <ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/%E5%85%A8%E6%96%B0%E4%BD%93%E9%AA%8C/">全新体验</a><span class="category-list-count">1</span></li><li class="category-list-item"><a class="category-list-link" href="/categories/%E8%80%83%E7%A0%94%E5%A4%8D%E4%B9%A0/">考研复习</a><span class="category-list-count">3</span></li></ul>
-  </aside>
-
-
-            
-                
-  <aside id="krw-tags" class="widget widget-kratos-tags clearfix">
-    <h4 class="widget-title"><i class="fa fa-tags"></i>标签聚合</h4>
-      <div class="tag-clouds">
-        <a href="/tags/%E5%AD%A6%E4%B9%A0/" style="font-size: 0.8em;">学习</a> <a href="/tags/%E6%AC%A2%E8%BF%8E/" style="font-size: 0.6em;">欢迎</a>
-      </div>
-  </aside>
-
-            
-                
-  <aside id="krw-posts" class="widget widget-kratos-posts">
-  <h4 class="widget-title"><i class="fa fa-file"></i>最新文章</h4>
-  <div class="tab-content">
-      <ul class="list-group">
-        
-        
-          
-          
-            <a class="list-group-item" href="/posts/%E5%8A%9B%E6%89%A3%E4%BB%A3%E7%A0%81%E7%BB%83%E4%B9%A0/"><i class="fa fa-book"></i> 力扣代码练习</a>
-            
-          
-        
-          
-          
-            <a class="list-group-item" href="/posts/%E6%95%B0%E5%AD%A6/"><i class="fa fa-book"></i> 数学</a>
-            
-          
-        
-          
-          
-            <a class="list-group-item" href="/posts/%E8%8B%B1%E8%AF%AD/"><i class="fa fa-book"></i> 英语</a>
-            
-          
-        
-          
-          
-            <a class="list-group-item" href="/posts/hello-world/"><i class="fa fa-book"></i> 你好，世界！</a>
-            
-          
-        
-      </ul>
-  </div>
-  </aside>
-
-            
-    </div>
-</section>
-            
-
-        
-
-                </div>
-    </div>
-</div>
-
-<footer>
-    <div id="footer">
-        <div class="container">
-            <div class="row">
-                <div class="col-md-6 col-md-offset-3 footer-list text-center">
-                    <ul class="kratos-social-icons">
-                        
-                            <li>
-                                <a href="https://github.com/kratos-rebirth" target="_blank" rel="nofollow">
-                                    <i class="fa fa-github"></i>
-                                </a>
-                            </li>
-                        
-                            <li>
-                                <a href="/atom.xml" target="_blank" rel="nofollow">
-                                    <i class="fa fa-rss"></i>
-                                </a>
-                            </li>
-                        
-                    </ul>
-                    <ul class="kratos-copyright">
-                        <div>
-                            <li>&copy; 2026 yiyezhiqiu的博客 版权所有.</li>
-                            <li>本站已在风雨中飘摇<span id="kr-since">Loading...</span></li>
-                        </div>
-                        <div>
-                            <li>自豪地使用 <a href="https://github.com/Candinya/Kratos-Rebirth" target="_blank">Kratos:Rebirth</a> 主题</li>
-                            <li>站点由 <a href="https://github.com/Candinya/Kratos-Rebirth/graphs/contributors" target="_blank">All contributors</a> 用 <i class="fa fa-heart" style="color:#d43f57"></i> 搭建</li>
-                        </div>
-                        <!-- 额外的追加注入项 -->
-                        
-                            <div>
-                                
-                                    <li>由 <a href="https://hexo.io" target="_blank" rel="nofollow">Hexo</a> 强力驱动</li>
-                                
-                                    <li>在 <a href="https://github.io" target="_blank">Github Pages</a> 暖心托管</li>
-                                
-                            </div>
-                        
-                    </ul>
-                </div>
-            </div>
-        </div>
-        <div class="kr-tool text-center">
-            <div class="tool">
-                
-                    <div class="box search-box">
-                        <a href="/search">
-                            <span class="fa fa-search"></span>
-                        </a>
-                    </div>
-                
-                <div class="box theme-box" id="theme-toggle">
-                    <span class="fa fa-adjust"></span>
-                </div>
-            </div>
-            <div id="gotop-box" class="box gotop-box">
-                <span class="fa fa-chevron-up"></span>
-            </div>
-        </div>
-    </div>
-</footer>
-</div>
-</div>
-
-
-    <div id="kr-donate-modal" class="kr-modal">
-    <div class="kr-modal-bg" onclick="krCloseDonateModal()"></div>
-    <div class="kr-modal-content">
-        <div class="kr-modal-header">
-            <div class="kr-modal-icon">
-                <i class="fa fa-bitcoin"></i>
-            </div>
-            <div class="kr-modal-title">赞助喵</div>
-            <button class="kr-modal-close" onclick="krCloseDonateModal()">
-                <i class="fa fa-times-circle"></i>
-            </button>
-        </div>
-        <div class="kr-modal-body">
-            <div class="kr-donate-message">非常感谢您的喜欢！ <i class="fa fa-heart" style="color:#d43f57"></i></div>
-            <div class="kr-donate-qr" id="kr-donate-qr">
-                
-                    <img class="kr-donate-placeholder" src="https://dev.krt.moe/demo-assets/donate.webp" alt="赞助喵" />
-                
-            </div>
-            <div class="kr-donate-platforms">
-                
-                    
-                        <button class="kr-donate-platform-button" style="color: skyblue;" title="模拟支付" onclick="krDonateModalShowPlatformQR('example_payment', 'skyblue')">
-                            <i class="fa fa-credit-card"></i>
-                        </button>
-                    
-                
-            </div>
-        </div>
-    </div>
-</div>
-<script defer src="/js/kr-modal/donate.min.js"></script>
-
-
-
-
-    <div id="kr-share-modal" class="kr-modal">
-    <div class="kr-modal-bg" onclick="krCloseShareModal()"></div>
-    <div class="kr-modal-content">
-        <div class="kr-modal-header">
-            <div class="kr-modal-icon">
-                <i class="fa fa-share-alt"></i>
-            </div>
-            <div class="kr-modal-title">分享这一刻</div>
-            <button class="kr-modal-close" onclick="krCloseShareModal()">
-                <i class="fa fa-times-circle"></i>
-            </button>
-        </div>
-        <div class="kr-modal-body">
-            <div class="kr-share-message">让朋友们也来瞅瞅！</div>
-            <div class="kr-share-qr" id="kr-share-qr"></div>
-            <div class="kr-share-platforms">
-                
-                    <button class="kr-share-platform-button" style="color: #62b6e7;" title="喵窝" onclick="krShareModalOpenPlatform('https://nya.one/share?text=%3E%20$TITLE%0A%3E%0A%3E%20$SUMMARY%0A----%20$SITE%0A%0A$URL')">
-                        <svg fill="currentColor" width="18" height="18" viewBox="0 0 329 388"><path d="M0,36.226c0,-19.993 16.233,-36.226 36.226,-36.226c13.788,0 25.787,7.719 31.908,19.068l188.366,229.845l0,-111.259c-6.356,5.508 -14.645,8.843 -23.707,8.843c-19.994,0 -36.226,-16.232 -36.226,-36.226c-0,-8.551 2.968,-16.413 7.93,-22.613l-0.015,-0.013l56.614,-69.08c6.2,-11.073 18.047,-18.565 31.63,-18.565c19.994,0 36.227,16.233 36.227,36.226l-0,314.644c-0,19.994 -16.233,36.226 -36.227,36.226c-13.166,0 -24.701,-7.039 -31.044,-17.555l-189.229,-230.899l-0,212.228c-0,19.994 -16.233,36.226 -36.227,36.226c-19.993,0 -36.226,-16.232 -36.226,-36.226l0,-314.644Z" /></svg>
-                    </button>
-                
-            </div>
-        </div>
-    </div>
-</div>
-<script defer src="/js/kr-modal/share.min.js"></script>
-
-
-
-<!-- 额外的追加注入项 -->
-
-
-        <script>
-    if (!window.kr) {
-        window.kr = {};
+    function changeBackground() {
+        //document.getElementById("bg").style.opacity = 1; // 渐隐
+        setTimeout(() => {
+            document.getElementById("bg").style.backgroundImage = `url(${images[currentIndex]})`;
+            document.getElementById("bg").style.opacity = 1; // 渐显
+            currentIndex = (currentIndex + 1) % images.length;
+        }, 1000); // 与transition时间一致
     }
-    window.kr.notMobile = (!(navigator.userAgent.match(/(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i)));
-    window.kr.siteRoot = "/";
+
+    changeBackground()
+    setInterval(changeBackground, 15000); // 每15秒切换一次背景
 </script>
+  <div class="mdui-drawer-body-left mdui-appbar-with-toolbar mdui-theme-layout-auto mdui-loaded"> 
+   <!-- background --> 
+   <div id="bg" class="index_bg"></div> 
+   <!-- main --> 
+   <div>
+    
+    <header class="appbar mdui-appbar mdui-appbar-fixed" importance="high"> 
+    <div class="mdui-toolbar mdui-color-theme card-content"> 
+     <span class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-drawer="{target: '#main-drawer', swipe: true}"> <i class="mdui-icon material-icons" mdui-tooltip="{content: '菜单'}">menu</i> </span> 
+     <div class="mdui-toolbar-spacer">
+       
+      <chizaobook style="line-height: 1em; color:#F5F5F5;;"> 
+       <script>
+        let app = document.createElement('script');
+            app.src = 'https://cdn.jsdelivr.net/gh/ChizaoProject/chizaobook@master/app.js';
+            app.async = true;
+            app.onload = function () {
+              chizaobook = new Chizaobook({
+                container: "chizaobook", // string
+                packageSource: "https://cdn.jsdelivr.net/gh/ChizaoProject/Packages@master/package_source.json", // string
+                packageType: null // int
+          })
+          chizaobook.selector();
+          };
+        document.head.appendChild(app);
+       </script> 
+       <!--<div class="mdui-chip" style="margin: auto; position: fixed; transform: translate(0, -50%);">
+             <span id="time" class="mdui-chip-title" style="transform: translate(0, -50%);"></span>
+             <script>
+               var datetime = new Date();
+               console.log(datetime);
+             </script>
+           </div>
+           --> 
+      </chizaobook>
+      
+     </div> 
+     <a href="" target="_blank" class="mdui-btn mdui-btn-icon mdui-ripple mdui-ripple-white" mdui-tooltip="{content: 'Github'}"> 
+      <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewbox="0 0 36 36" enable-background="new 0 0 36 36" xml:space="preserve" class="mdui-icon" style="width: 24px;height:24px;"> 
+       <path fill-rule="evenodd" clip-rule="evenodd" fill="#ffffff" d="M18,1.4C9,1.4,1.7,8.7,1.7,17.7c0,7.2,4.7,13.3,11.1,15.5c0.8,0.1,1.1-0.4,1.1-0.8c0-0.4,0-1.4,0-2.8c-4.5,1-5.5-2.2-5.5-2.2c-0.7-1.9-1.8-2.4-1.8-2.4c-1.5-1,0.1-1,0.1-1c1.6,0.1,2.5,1.7,2.5,1.7c1.5,2.5,3.8,1.8,4.7,1.4c0.1-1.1,0.6-1.8,1-2.2c-3.6-0.4-7.4-1.8-7.4-8.1c0-1.8,0.6-3.2,1.7-4.4c-0.2-0.4-0.7-2.1,0.2-4.3c0,0,1.4-0.4,4.5,1.7c1.3-0.4,2.7-0.5,4.1-0.5c1.4,0,2.8,0.2,4.1,0.5c3.1-2.1,4.5-1.7,4.5-1.7c0.9,2.2,0.3,3.9,0.2,4.3c1,1.1,1.7,2.6,1.7,4.4c0,6.3-3.8,7.6-7.4,8c0.6,0.5,1.1,1.5,1.1,3c0,2.2,0,3.9,0,4.5c0,0.4,0.3,0.9,1.1,0.8c6.5-2.2,11.1-8.3,11.1-15.5C34.3,8.7,27,1.4,18,1.4z"></path> 
+      </svg> </a> 
+    </div> 
+   </header>  
 
+    <div class="mdui-drawer mdui-drawer-close sidebar" id="main-drawer"> 
+     <div class="mdui-list" mdui-collapse="{accordion: true}" style="margin-bottom: 75px;"> 
+       
+      <div class="
+                mdui-collapse-item
+                "> 
+       <div class="mdui-collapse-item-header mdui-list-item mdui-ripple"> 
+        <i class="
+                    mdui-list-item-icon
+                    mdui-icon
+                    material-icons
+                    mdui-text-color-blue">near_me</i>
+        <div class="mdui-list-item-content">
+         A1
+        </div> 
+        <i class="mdui-collapse-item-arrow mdui-icon material-icons">keyboard_arrow_down</i> 
+       </div>
+        
+         <div class="mdui-collapse-item-body mdui-list"> 
+          <a href="https://example.com/" target="_blank" mdui-tooltip="{content: 'example'}" class="
+                        mdui-list-item
+                        mdui-ripple
+                        ">B1</a> 
+         </div>
+         
+      </div> 
+      
+     </div> 
+    </div> 
+   </div> 
 
-  <script defer src="/vendors/nprogress@0.2.0/nprogress.js"></script>
+   <div id="container" class="container"> 
+    <div class="card"> 
+     <div id="card-content" class="card-content"> 
+      <center>
+       <div class="logo"></div>
+       <style>
+        .logo {
+	        width: 100px;
+	        height: 100px;
+	        margin-top: -50px;
+	        border:1px soild white;
+	        background: url('') no-repeat center;
+	        border-radius: 50px;
+	        background-size: 100px;
+        }
+       </style>
+      </center> 
+      <b class="nickname"></b> 
+      <br /> 
+      <b class="motto"></b> 
+     </div> 
+    </div> 
 
+    <div class="card" style="margin-top: 1%;"> 
+     <div id="card-content" class="card-content"> 
+      <div class="social">
+         
+        <a href="https://example.com" target="_blank"><button class="mdui-btn mdui-btn-icon" mdui-tooltip="{content: 'example'}"><span class="iconfont iconbili"></span></button></a> 
+       
+      </div> 
+     </div> 
+    </div> 
 
+   </div>  
 
-  <script defer src="/vendors/viewerjs@1.11.6/dist/viewer.min.js"></script>
+   <!-- footer --> 
+   <div id="footer" class="footer"> 
+    <p class="remark">
+      <br>
+      
+      <br>Powered By <a href="https://hexo.io/" target="_blank"> Hexo </a> And <a href="https://mdui.org" target="_blank">MDUI</a>.<br /> Theme ❤ <a href="https://kuri.ink/" target="">kuri</a>. 
 
+    </p> 
+   </div>  
+   <script async="" src="//blog.kuri.ink/lib/aplayer@1.10.0/aplayer.min.js" type="text/javascript"></script> 
+   <script async="" src="//blog.kuri.ink/lib/meting/meting.min.js" type="text/javascript"></script>
 
-<script defer src="/js/kr-core.min.js"></script>
+   
 
+   
+      <script charset="UTF-8" id="LA_COLLECT" src="//sdk.51.la/js-sdk-pro.min.js"></script>
+      <script>LA.init({id: "",ck: ""})</script>
+   
 
-  <script defer src="/js/kr-pjax.min.js"></script>
-
-
-<!-- 额外的追加注入项 -->
-
-
-    </body>
+  </div>
+ </body>
 </html>
