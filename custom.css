@@ -1,0 +1,5 @@
+article h4::before,
+article h5::before,
+article h6::before {
+  content: none !important;
+}
